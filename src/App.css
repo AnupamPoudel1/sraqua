@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
+
+/* 
+  Resets
+*/
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bg-video {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+::-webkit-scrollbar {
+  width: 8px;
+  background: #64149c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fc8c1c;
+  border-radius: 20px;
+}
+
+@layer base {
+  html {
+    font-family: "Roboto Mono", monospace;
+    /* font-family: "JetBrains Mono", monospace; */
+    /* font-family: 'Montserrat', sans-serif; */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.h-over:hover {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
 }
 
-.App-link {
-  color: #61dafb;
+.glassmo {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  /* border: 1px solid rgba(255, 255, 255, 0.18); */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.topnleft{
+  top: 30%;
+  left: 10%;
+}
+
+.width{
+  width: 30rem;
 }
