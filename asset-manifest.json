@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/sraqua/static/css/main.4d98c8e3.css",
+    "main.js": "/sraqua/static/js/main.98d1abbb.js",
+    "static/media/bgvid1.mov": "/sraqua/static/media/bgvid1.f3fc098ce33439e34ee4.mov",
+    "static/media/logo.png": "/sraqua/static/media/logo.7d60382de9d84ca9757f.png",
+    "index.html": "/sraqua/index.html",
+    "main.4d98c8e3.css.map": "/sraqua/static/css/main.4d98c8e3.css.map",
+    "main.98d1abbb.js.map": "/sraqua/static/js/main.98d1abbb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4d98c8e3.css",
+    "static/js/main.98d1abbb.js"
+  ]
+}
