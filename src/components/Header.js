@@ -29,7 +29,7 @@ const Header = () => {
     }, []);
 
     return (
-        <nav className={show? "fixed w-full top-0 py-2 px-10 sm:px-14 lg:px-24 flex flex-col justify-center items-center md:py-2 transition-all duration-300 overflow-hidden z-10 glassmo" : "fixed w-full -top-20 transition-all duration-500 overflow-hidden glassmo"}>
+        <nav className={show? "fixed w-full top-0 py-0 px-10 sm:px-14 lg:px-24 flex flex-col justify-center items-center transition-all duration-300 overflow-hidden z-10 glassmo" : "fixed w-full -top-20 py-0 px-10 sm:px-14 lg:px-24 flex flex-col justify-center items-center transition-all duration-300 overflow-hidden z-10 glassmo"}>
             <div className="flex justify-between items-center w-full md:justify-between">
                 <div className="logo h-16 w-16 flex items-center justify-start">
                     <a href="/" className='text-xl h-full w-max flex justify-center items-center text-golden'>

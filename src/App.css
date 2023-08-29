@@ -17,11 +17,6 @@
   box-sizing: border-box;
 }
 
-.bg-video {
-  height: 100vh;
-  width: 100vw;
-  object-fit: cover;
-}
 
 ::-webkit-scrollbar {
   width: 8px;
@@ -55,10 +50,22 @@
 }
 
 .topnleft{
-  top: 30%;
+  top: 50%;
   left: 10%;
+  transform: translate(-10%, -50%);
+}
+
+.topnright{
+  top: 50%;
+  right: 10%;
+  transform: translate(10%, -50%);
 }
 
 .width{
   width: 30rem;
+}
+
+.bgimg{
+  background: url(./assets/image.png) no-repeat;
+  background-size: cover;
 }
