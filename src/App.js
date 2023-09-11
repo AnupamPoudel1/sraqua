@@ -1,14 +1,14 @@
 import './App.css';
 import Header from './components/Header';
 import Home from './components/Home';
-import Services from './components/Services';
+import About from './components/About';
 
 function App() {
   return (
     <div className='h-screen'>
       <Header/>
       <Home/>
-      <Services/>
+      <About/>
     </div>
   );
 }

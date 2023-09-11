@@ -71,6 +71,6 @@
 }
 
 .stroke{
-  stroke-width: 3;
-  stroke: #fc8c1c;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
 }
