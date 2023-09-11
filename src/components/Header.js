@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import logo from '../assets/logo.png';
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { RxCross1 } from 'react-icons/rx';
 
 const Header = () => {
 
-    const [show, setShow] = useState(false);
+    // const [show, setShow] = useState(false);
     const [drop, setDrop] = useState(false);
 
     const handleCLick = () => {
@@ -13,23 +13,24 @@ const Header = () => {
         setDrop(!drop);
     };
 
-    const controlNavbar = () => {
-        if (window.scrollY > 25) {
-            setShow(true);
-        }else{
-          setShow(false);
-        }
-    };
+    // const controlNavbar = () => {
+    //     if (window.scrollY > 25) {
+    //         setShow(true);
+    //     }else{
+    //       setShow(false);
+    //     }
+    // };
 
-    useEffect(() => {
-        window.addEventListener('scroll', controlNavbar);
-        return () => {
-            window.removeEventListener('scroll', controlNavbar);
-        };
-    }, []);
+    // useEffect(() => {
+    //     window.addEventListener('scroll', controlNavbar);
+    //     return () => {
+    //         window.removeEventListener('scroll', controlNavbar);
+    //     };
+    // }, []);
 
     return (
-        <nav className={show? "fixed w-full top-0 py-0 px-10 sm:px-14 lg:px-24 flex flex-col justify-center items-center transition-all duration-300 overflow-hidden z-10 glassmo" : "fixed w-full -top-20 py-0 px-10 sm:px-14 lg:px-24 flex flex-col justify-center items-center transition-all duration-300 overflow-hidden z-10 glassmo"}>
+        // : "fixed w-full -top-20 py-0 px-10 sm:px-14 lg:px-24 flex flex-col justify-center items-center transition-all duration-300 overflow-hidden z-10 "
+        <nav className={"fixed w-full top-0 py-0 px-10 sm:px-14 lg:px-24 flex flex-col justify-center items-center transition-all duration-300 overflow-hidden z-10" }>
             <div className="flex justify-between items-center w-full md:justify-between">
                 <div className="logo h-16 w-16 flex items-center justify-start">
                     <a href="/" className='text-xl h-full w-max flex justify-center items-center text-golden'>
@@ -57,12 +58,12 @@ const Header = () => {
                     </button>
                 </div>
             </div>
-            <div className={drop && show ? 'overflow-hidden h-max w-11/12 border-2 border-white bg-transparent text-black flex flex-col justify-center items-center rounded-lg my-8 opacity-100 transition-all duration-500 sm:hidden font-bold' : 'absolute opacity-0 text-black -top-52 transition-all duration-500'}>     
-                <a href="/" className='py-3 text-base hover:text-white border-b-2 border-white w-full text-center transition-all duration-300'>Home</a>
-                <a href="/" className='py-3 text-base hover:text-white border-b-2 border-white w-full text-center transition-all duration-300'>Services</a>
-                <a href="/" className='py-3 text-base hover:text-white border-b-2 border-white w-full text-center transition-all duration-300'>Products</a>
-                <a href="/" className='py-3 text-base hover:text-white border-b-2 border-white w-full text-center transition-all duration-300'>Fishes</a>
-                <a href="/" className='py-3 hover:text-white text-base w-full text-center transition-all duration-300'>Contact</a>
+            <div className={drop ? 'overflow-hidden h-max bg-golden w-full border-2 border-black text-white flex flex-col justify-center items-center rounded-lg my-8 opacity-100 transition-all duration-500 sm:hidden font-bold' : 'absolute opacity-0 text-black -top-20 transition-all duration-500'}>     
+                <a href="/" className='py-3 text-lg w-full text-center transition-all duration-300'>Home</a>
+                <a href="/" className='py-3 text-lg w-full text-center transition-all duration-300'>Services</a>
+                <a href="/" className='py-3 text-lg w-full text-center transition-all duration-300'>Products</a>
+                <a href="/" className='py-3 text-lg w-full text-center transition-all duration-300'>Fishes</a>
+                <a href="/" className='py-3 text-lg w-full text-center transition-all duration-300'>Contact</a>
             </div>
         </nav>
     )

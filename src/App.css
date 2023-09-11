@@ -66,6 +66,11 @@
 }
 
 .bgimg{
-  background: url(./assets/image.png) no-repeat;
+  background: url(./assets/fish.jpg) no-repeat;
   background-size: cover;
+}
+
+.stroke{
+  stroke-width: 3;
+  stroke: #fc8c1c;
 }
