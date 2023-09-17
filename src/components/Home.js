@@ -6,7 +6,7 @@ const Home = () => {
     <div className='relative h-screen bgimg flex px-10 sm:px-14 lg:px-24 items-center max-sm:justify-center'>
       <div className="flex flex-col items-center w-2/5 max-sm:w-full max-sm:px-10 rounded-lg absolute mt-10">
         <div className="w-full flex flex-col max-sm:p-0">
-          <h1 className='text-7xl font-bold text-white stroke'>
+          <h1 className='text-7xl font-bold text-purple stroke'>
             SR Aqua and Pet House
           </h1>
           <p className='text-base text-golden rounded-sm font-bold mt-5'>
@@ -24,16 +24,16 @@ const Home = () => {
       </div>
       <div className="absolute flex justify-center items-center left-2/4 -translate-x-2/4 bottom-10 w-max h-max rounded-md glassmo py-5">
         <div className="flex justify-center items-center flex-col ml-10 max-sm:ml-5">
-          <p className="text-xl font-bold text-purple">200+</p>
-          <p className="text-base text-white">Products</p>
+          <p className="text-xl font-bold text-golden">10+</p>
+          <p className="text-base text-purple">Brands</p>
         </div>
         <div className="flex justify-center items-center flex-col mx-20 max-sm:mx-5">
-          <p className="text-xl font-bold text-purple">50+</p>
-          <p className="text-base text-white">Brands</p>
+          <p className="text-xl font-bold text-golden">100+</p>
+          <p className="text-base text-purple">Products</p>
         </div>
         <div className="flex justify-center items-center flex-col mr-10 max-sm:mr-5">
-          <p className="text-xl font-bold text-purple">500+</p>
-          <p className="text-base text-white">Customers</p>
+          <p className="text-xl font-bold text-golden">200+</p>
+          <p className="text-base text-purple">Customers</p>
         </div>
       </div>
     </div>
