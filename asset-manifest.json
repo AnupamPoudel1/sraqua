@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/sraqua/static/css/main.b1ff6b4c.css",
-    "main.js": "/sraqua/static/js/main.2199996a.js",
+    "main.css": "/sraqua/static/css/main.6c19e11b.css",
+    "main.js": "/sraqua/static/js/main.ce773b18.js",
+    "static/media/bgvideo.mp4": "/sraqua/static/media/bgvideo.42760f833be30f0b2e90.mp4",
     "static/media/fish.jpg": "/sraqua/static/media/fish.bcd2d4d34e8ec3d036f1.jpg",
+    "static/media/Experience.png": "/sraqua/static/media/Experience.c7e9330beb6042fd2d18.png",
     "static/media/logo.png": "/sraqua/static/media/logo.7d60382de9d84ca9757f.png",
     "index.html": "/sraqua/index.html",
-    "main.b1ff6b4c.css.map": "/sraqua/static/css/main.b1ff6b4c.css.map",
-    "main.2199996a.js.map": "/sraqua/static/js/main.2199996a.js.map"
+    "main.6c19e11b.css.map": "/sraqua/static/css/main.6c19e11b.css.map",
+    "main.ce773b18.js.map": "/sraqua/static/js/main.ce773b18.js.map"
   },
   "entrypoints": [
-    "static/css/main.b1ff6b4c.css",
-    "static/js/main.2199996a.js"
+    "static/css/main.6c19e11b.css",
+    "static/js/main.ce773b18.js"
   ]
 }
