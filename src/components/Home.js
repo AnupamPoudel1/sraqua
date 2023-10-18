@@ -6,7 +6,7 @@ const Home = () => {
     <div className='relative h-screen bgimg flex px-10 sm:px-14 lg:px-24 items-center max-sm:justify-center'>
       <div className="flex flex-col items-center w-2/5 max-sm:w-full max-sm:px-10 rounded-lg absolute mt-10">
         <div className="w-full flex flex-col max-sm:p-0">
-          <h1 className='text-7xl font-bold text-purple stroke'>
+          <h1 className='text-7xl font-bold text-purple stroke max-sm:text-center'>
             SR Aqua and Pet House
           </h1>
           <p className='text-base text-golden rounded-sm font-bold mt-5'>

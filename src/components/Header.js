@@ -1,40 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from '../assets/logo.png';
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { RxCross1 } from 'react-icons/rx';
 
 const Header = () => {
 
-    // const [show, setShow] = useState(false);
+    const [show, setShow] = useState(true);
     const [drop, setDrop] = useState(false);
 
     const handleCLick = () => {
-        console.log("Click handled");
         setDrop(!drop);
     };
 
-    // const controlNavbar = () => {
-    //     if (window.scrollY > 25) {
-    //         setShow(true);
-    //     }else{
-    //       setShow(false);
-    //     }
-    // };
+    let prevScrollPos = window.scrollY;
 
-    // useEffect(() => {
-    //     window.addEventListener('scroll', controlNavbar);
-    //     return () => {
-    //         window.removeEventListener('scroll', controlNavbar);
-    //     };
-    // }, []);
+    const controlNavbar = () => {
+        let curScrollPos = window.scrollY;
+        if(prevScrollPos > curScrollPos){
+            setShow(true);
+        }
+        else{
+            setShow(false);
+        }
+        prevScrollPos = curScrollPos;
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', controlNavbar);
+        return () => {
+            window.removeEventListener('scroll', controlNavbar);
+        };
+    });
 
     return (
         // : "fixed w-full -top-20 py-0 px-10 sm:px-14 lg:px-24 flex flex-col justify-center items-center transition-all duration-300 overflow-hidden z-10 "
-        <nav className={"fixed w-full top-0 py-0 px-10 sm:px-14 lg:px-24 flex flex-col justify-center items-center transition-all duration-300 overflow-hidden z-10" }>
+        <nav className={show ? "fixed w-full top-0 py-0 px-10 sm:px-14 lg:px-24 flex flex-col justify-center items-center transition-all duration-300 overflow-hidden z-10 glassmo" : "fixed w-full -top-20 py-0 px-10 sm:px-14 lg:px-24 flex flex-col justify-center items-center transition-all duration-300 overflow-hidden z-10 glassmo"}>
             <div className="flex justify-between items-center w-full md:justify-between">
                 <div className="logo h-16 w-16 flex items-center justify-start">
                     <a href="/" className='text-xl h-full w-max flex justify-center items-center text-golden'>
-                        <img src={logo} alt="logo" className='h-full w-full bg-cover'/>
+                        <img src={logo} alt="logo" className='h-full w-full bg-cover' />
                     </a>
                 </div>
                 <div className="max-md:hidden sm:visible text-base w-max flex justify-center items-center text-white">
@@ -58,7 +62,7 @@ const Header = () => {
                     </button>
                 </div>
             </div>
-            <div className={drop ? 'overflow-hidden h-max bg-golden w-full border-2 border-black text-white flex flex-col justify-center items-center rounded-lg my-8 opacity-100 transition-all duration-500 sm:hidden font-bold' : 'absolute opacity-0 text-black -top-20 transition-all duration-500'}>     
+            <div className={drop && show ? 'overflow-hidden h-max w-full text-white flex flex-col justify-center items-center rounded-lg my-4 opacity-100 transition-all duration-500 sm:hidden font-bold' : 'absolute opacity-0 text-black -top-20 transition-all duration-500'}>
                 <a href="/" className='py-3 text-lg w-full text-center transition-all duration-300'>Home</a>
                 <a href="/" className='py-3 text-lg w-full text-center transition-all duration-300'>Services</a>
                 <a href="/" className='py-3 text-lg w-full text-center transition-all duration-300'>Products</a>

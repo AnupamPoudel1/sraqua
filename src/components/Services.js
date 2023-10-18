@@ -1,12 +1,13 @@
 import React from 'react';
 import bgvideo from '../assets/bgvideo.mp4';
 import Card from './Card';
-import exp from '../assets/Experience.png';
+// import exp from '../assets/Experience.png';
+// import ProductCard from './ProductCard';
 
 const Services = () => {
   return (
     <div className='h-max pb-14 flex items-center flex-col bg-black'>
-      <div className="py-14">
+      <div className="py-8">
         <h1 className='text-center text-3xl text-golden'>OUR SERVICES</h1>
       </div>
       <div className="h-full gap-10 w-full flex px-10 sm:px-14 lg:px-24 justify-between items-center max-sm:justify-center max-lg:flex-col">
@@ -22,7 +23,7 @@ const Services = () => {
       </div>
       <div className="w-full mt-20">
         <h1 className='text-center text-purple text-xl'>Why Choose Us ?</h1>
-        <div className="h-full w-full flex px-10 sm:px-14 lg:px-24 justify-between items-center max-sm:justify-center max-lg:flex-col" >
+        <div className="mt-8 grid w-full px-10 sm:px-14 lg:px-24 grid-cols-3 gap-x-10 gap-y-10 max-lg:grid-cols-2 max-sm:grid-cols-1" >
           <Card title="Experience" description="We have been in this field for a long time now, so our experience will come in handy."/>
           <Card title="Authenticity" description="Original products from relaible and authentic brands."/>
           <Card title="Price" description="Our products price are reasonable and are not overpriced"/>
