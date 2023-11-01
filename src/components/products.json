@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "title": "okiko head up",
+    "image": "https://i.imgur.com/3e2bOZp.png",
+    "category": "fish food",
+    "price": 55
+  },
+  {
+    "id": 2,
+    "title": "okiko platinum",
+    "image": "https://i.imgur.com/muzaoYC.png",
+    "category": "fish food",
+    "price": 25
+  },
+  {
+    "id": 3,
+    "title": "six seven",
+    "image": "https://i.imgur.com/cKmHlqN.png",
+    "category": "fish food",
+    "price": 85
+  },
+  {
+    "id": 4,
+    "title": "cichlid herbivore",
+    "image": "https://i.imgur.com/fcQTKSF.png",
+    "category": "fish food",
+    "price": 85
+  },
+  {
+    "id": 6,
+    "title": "six seven",
+    "image": "https://i.imgur.com/cKmHlqN.png",
+    "category": "fish food",
+    "price": 85
+  },
+  {
+    "id": 7,
+    "title": "asean mas japan fish food",
+    "image": "https://i.imgur.com/cf8iu6n.png",
+    "category": "fish food",
+    "price": 85
+  },
+  {
+    "id": 8,
+    "title": "akira bits discus",
+    "image": "https://i.imgur.com/tSfEJBo.png",
+    "category": "fish food",
+    "price": 85
+  },
+  {
+    "id": 9,
+    "title": "taiyo bio gold fish food",
+    "image": "https://i.imgur.com/HN7BxCT.png",
+    "category": "fish food",
+    "price": 85
+  },
+  {
+    "id": 10,
+    "title": "bfb made-spirulina",
+    "image": "https://i.imgur.com/h5UQKjX.png",
+    "category": "fish food",
+    "price": 85
+  },
+  {
+    "id": 11,
+    "title": "goldy colour food",
+    "image": "https://i.imgur.com/gINjpCB.png",
+    "category": "fish food",
+    "price": 85
+  },
+  {
+    "id": 12,
+    "title": "taiyo vacation",
+    "image": "https://i.imgur.com/2ST1mCN.jpg",
+    "category": "fish food",
+    "price": 85
+  },
+  {
+    "id": 13,
+    "title": "inch gold",
+    "image": "https://i.imgur.com/xPB4lfG.png",
+    "category": "fish food",
+    "price": 85
+  }
+]

@@ -6,38 +6,38 @@ import { SlScreenSmartphone } from 'react-icons/sl';
 
 const Contact = () => {
     return (
-        <div className='relative h-screen w-full flex justify-center items-center flex-col bg-purple'>
+        <div className='relative h-screen w-full flex justify-center items-center flex-col bg-white'>
             <div className="absolute top-4 z-10 py-3">
-                <h1 className='text-center text-3xl text-golden bg-black p-2 rounded font-bold'>CONTACT US</h1>
+                <h1 className='text-center text-3xl bg-blue-950 text-blue-400 p-2 rounded font-bold mt-4'>CONTACT US</h1>
             </div>
-            <div className="absolute left-[5%] sm:top-[50%] -translate-y-[50%] top-[75%] z-10 bg-white">
-                <h1 className='text-center text-xl text-golden bg-black p-2 font-bold'>Contact Info</h1>
+            <div className="absolute left-[5%] sm:top-[50%] -translate-y-[50%] top-[75%] z-10 text-blue-400 bg-blue-950">
+                <h1 className='text-center text-xl text-blue-950 bg- p-2 font-bold'>Contact Info</h1>
                 <div className="text-base p-3 flex items-center">
-                    <div className="text-purple items-center">
+                    <div className="text-blue-400 items-center">
                         <TbMail className='mr-4 text-3xl' />
                     </div>
-                    <div className="mail text-black">
-                        <p className="text-golden">E-mail</p>
-                        <p className='text'>sraqua@gmail.com</p>
+                    <div className="mail text-white">
+                        <p className="text-blue-400">E-mail</p>
+                        <p className='text-white '>sraqua@gmail.com</p>
                     </div>
                 </div>
                 <div className="text-base p-3 flex items-center">
-                    <div className="text-purple items-center">
+                    <div className="text-blue-400 items-center">
                         <SlScreenSmartphone className='mr-4 text-3xl' />
                     </div>
-                    <div className="mail text-black">
-                        <p className="text-golden">Phone no.</p>
-                        <p className='text'>9860679848</p>
-                        <p className='text'>9818607539</p>
+                    <div className="mail text-white">
+                        <p className="text-blue-400">Phone no.</p>
+                        <p className='text-white'>9860679848</p>
+                        <p className='text-white'>9818607539</p>
                     </div>
                 </div>
                 <div className="text-base p-3 flex items-center">
-                    <div className="text-purple items-center">
+                    <div className="text-blue-400 items-center">
                         <TbMapPinFilled className='mr-4 text-3xl' />
                     </div>
-                    <div className="mail text-black">
-                        <p className="text-golden">Location</p>
-                        <p className='text'>Tenzing Chowk, Kapan</p>
+                    <div className="mail">
+                        <p className="text-blue-400">Location</p>
+                        <p className='text-white'>Tenzing Chowk, Kapan</p>
                     </div>
                 </div>
             </div>

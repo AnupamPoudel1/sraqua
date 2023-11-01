@@ -1,85 +1,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;300;400;500;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
 
-/* 
-  Resets
-*/
-
-*,
-*::after,
-*::before {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
-::-webkit-scrollbar {
-  width: 8px;
-  background: #64149c;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #fc8c1c;
-  border-radius: 20px;
-}
-
-@layer base {
-  html {
-    font-family: "Roboto Mono", monospace;
-    /* font-family: "JetBrains Mono", monospace; */
-    /* font-family: 'Montserrat', sans-serif; */
-  }
-}
-
-.h-over:hover {
-  font-family: "JetBrains Mono", monospace;
-  font-weight: 700;
-}
-
-.glassmo {
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(50px);
-  -webkit-backdrop-filter: blur(50px);
-  /* border: 1px solid rgba(255, 255, 255, 0.18); */
-}
-
-.topnleft{
-  top: 50%;
-  left: 10%;
-  transform: translate(-10%, -50%);
-}
-
-.topnright{
-  top: 50%;
-  right: 10%;
-  transform: translate(10%, -50%);
-}
-
-.width{
-  width: 30rem;
-}
-
 .bgimg{
-  background: url(./assets/fish.jpg) no-repeat;
+  background: url(./assets/bg.jpg) no-repeat;
   background-size: cover;
 }
 
-.stroke{
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
+.wave{
+  background: url(./assets/wave1.png);
+  background-size: 1000px 144px;
 }
 
-.bounce {
-  animation: customBounce 2s ease infinite;
+.wave1{
+  animation: animate 30s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0;
 }
-@keyframes customBounce {
-	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-	40% {transform: translateY(-20px);}
-	60% {transform: translateY(-15px);}
+.wave2{
+  animation: animate2 15s linear infinite;
+  z-index: 999;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 10px;
+}
+.wave3{
+  animation: animate 30s linear infinite;
+  z-index: 998;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 15px;
+}
+.wave4{
+  animation: animate2 5s linear infinite;
+  z-index: 997;
+  opacity: 0.7;
+  animation-delay: -5s;
+  bottom: 20px;
+}
+@keyframes animate{
+  0%
+  {
+    background-position-x: 0;
+  }
+  100%
+  {
+    background-position-x: 1000px;
+  }
+}
+@keyframes animate2{
+  0%
+  {
+    background-position-x: 0;
+  }
+  100%
+  {
+    background-position-x: -1000px;
+  }
 }

@@ -1,76 +1,51 @@
-import React, { useState, useEffect } from 'react';
-import logo from '../assets/logo.png';
-import { GiHamburgerMenu } from 'react-icons/gi'
+import React from 'react';
+import { RiMenu3Line } from 'react-icons/ri';
 import { RxCross1 } from 'react-icons/rx';
+import logo from '../assets/logo.jpg';
+import { useState } from 'react';
+
 
 const Header = () => {
+    const [show, setShow] = useState(false);
 
-    const [show, setShow] = useState(true);
-    const [drop, setDrop] = useState(false);
-
-    const handleCLick = () => {
-        setDrop(!drop);
-    };
-
-    let prevScrollPos = window.scrollY;
-
-    const controlNavbar = () => {
-        let curScrollPos = window.scrollY;
-        if(prevScrollPos > curScrollPos){
-            setShow(true);
-        }
-        else{
-            setShow(false);
-        }
-        prevScrollPos = curScrollPos;
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', controlNavbar);
-        return () => {
-            window.removeEventListener('scroll', controlNavbar);
-        };
-    });
-
+    const handleShow = () => {
+        setShow(true);
+    }
+    const handleHide = () => {
+        setShow(false);
+    }
     return (
-        // : "fixed w-full -top-20 py-0 px-10 sm:px-14 lg:px-24 flex flex-col justify-center items-center transition-all duration-300 overflow-hidden z-10 "
-        <nav className={show ? "fixed w-full top-0 py-0 px-10 sm:px-14 lg:px-24 flex flex-col justify-center items-center transition-all duration-300 overflow-hidden z-10 glassmo" : "fixed w-full -top-20 py-0 px-10 sm:px-14 lg:px-24 flex flex-col justify-center items-center transition-all duration-300 overflow-hidden z-10 glassmo"}>
-            <div className="flex justify-between items-center w-full md:justify-between">
-                <div className="logo h-16 w-16 flex items-center justify-start">
-                    <a href="/" className='text-xl h-full w-max flex justify-center items-center text-golden'>
-                        <img src={logo} alt="logo" className='h-full w-full bg-cover' />
-                    </a>
+        <>
+            <div className={show ? "absolute -top-[0%] h-screen w-full bg-blue-950 flex items-center justify-center z-10 transition-all delay-150 duration-300" : "h-screen w-full absolute -top-[100%] bg-blue-950 flex flex-col items-center z-10 transtion-all delay-150 duration-300"}>
+                <div className="absolute right-1/2 top-0 translate-x-1/2 h-20 w-20 mt-10">
+                    <img src={logo} alt="" className='h-full w-full bg-cover rounded-xl' />
                 </div>
-                <div className="max-md:hidden sm:visible text-base w-max flex justify-center items-center text-white">
-                    <a href="/" className='mx-7 px-2 w-20 flex justify-center items-center hover:text-golden border-b-2 border-transparent hover:font-bold hover:border-purple transition-all duration-300'>Home</a>
-                    <a href="/" className='mx-7 px-2 w-20 flex justify-center items-center hover:text-golden border-b-2 border-transparent hover:font-bold hover:border-purple transition-all duration-300'>Services</a>
-                    <a href="/" className='mx-7 px-2 w-20 flex justify-center items-center hover:text-golden border-b-2 border-transparent hover:font-bold hover:border-purple transition-all duration-300'>Products</a>
-                    <a href="/" className='mx-7 px-2 w-20 flex justify-center items-center hover:text-golden border-b-2 border-transparent hover:font-bold hover:border-purple transition-all duration-300'>Fish</a>
-                    <a href="/" className='mx-7 px-2 w-20 flex justify-center items-center hover:text-golden border-b-2 border-transparent hover:font-bold hover:border-purple transition-all duration-300'>Contact</a>
+                <div className='absolute right-32 max-sm:right-10 top-12 text-white cursor-pointer hover:text-blue-400' onClick={handleHide}>
+                    <RxCross1 className='mr-2 text-2xl' />
                 </div>
-                <div className="relative h-max w-max flex justify-center items-center max-lg:hidden">
-                    <button className={'hover:bg-golden hover:text-black bg-purple text-white px-3 py-2 rounded-lg flex justify-center items-center transition-all duration-300 font-semibold'} onClick={handleCLick}>
-                        Learn more
-                    </button>
-                </div>
-                <div className="relative h-max w-max flex justify-center items-center md:hidden">
-                    <button className={drop ? 'relative -left-96 opacity-0' : 'opacity-100 text-2xl text-white transition-all duration-500'} onClick={handleCLick}>
-                        <GiHamburgerMenu />
-                    </button>
-                    <button className={!drop ? 'absolute -left-96 opacity-0' : 'opacity-100 text-2xl text-white transition-all duration-500'} onClick={handleCLick}>
-                        <RxCross1 />
-                    </button>
+                <div className="absolute w-max top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center text-center text-white text-2xl font-bold">
+                    <a href="/" className='hover:text-blue-400 mt-5'>Home</a>
+                    <a href="/" className='hover:text-blue-400 mt-5'>About</a>
+                    <a href="/" className='hover:text-blue-400 mt-5'>Services</a>
+                    <a href="/" className='hover:text-blue-400 mt-5'>Aquatic Pets</a>
+                    <a href="/" className='hover:text-blue-400 mt-5'>Products</a>
                 </div>
             </div>
-            <div className={drop && show ? 'overflow-hidden h-max w-full text-white flex flex-col justify-center items-center rounded-lg my-4 opacity-100 transition-all duration-500 sm:hidden font-bold' : 'absolute opacity-0 text-black -top-20 transition-all duration-500'}>
-                <a href="/" className='py-3 text-lg w-full text-center transition-all duration-300'>Home</a>
-                <a href="/" className='py-3 text-lg w-full text-center transition-all duration-300'>Services</a>
-                <a href="/" className='py-3 text-lg w-full text-center transition-all duration-300'>Products</a>
-                <a href="/" className='py-3 text-lg w-full text-center transition-all duration-300'>Fishes</a>
-                <a href="/" className='py-3 text-lg w-full text-center transition-all duration-300'>Contact</a>
+            <div className='relative w-[90%] max-w-7xl h-max flex justify-center items-center text-xl font-bold text-white'>
+                <div className="w-full flex justify-between items-center mt-10">
+                    <div className='max-sm:hidden'>
+                        +977 986-0679848
+                    </div>
+                    <div className="flex justify-center items-center text-xl font-bold cursor-pointer hover:text-blue-300" onClick={handleShow}>
+                        Menu<RiMenu3Line className='ml-2 text-2xl' />
+                    </div>
+                </div>
+                <div className="absolute right-1/2 top-0 translate-x-1/2 h-20 w-20 mt-10">
+                    <img src={logo} alt="" className='h-full w-full bg-cover rounded-xl' />
+                </div>
             </div>
-        </nav>
+        </>
     )
 }
 
-export default Header;
+export default Header

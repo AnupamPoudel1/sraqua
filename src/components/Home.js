@@ -1,43 +1,43 @@
 import React from 'react';
-import { FaArrowDown } from 'react-icons/fa';
+import Header from './Header';
+import Typewriter from 'typewriter-effect';
 
 const Home = () => {
   return (
-    <div className='relative h-screen bgimg flex px-10 sm:px-14 lg:px-24 items-center max-sm:justify-center'>
-      <div className="flex flex-col items-center w-2/5 max-sm:w-full max-sm:px-10 rounded-lg absolute mt-10">
-        <div className="w-full flex flex-col max-sm:p-0">
-          <h1 className='text-7xl font-bold text-purple stroke max-sm:text-center'>
-            SR Aqua and Pet House
-          </h1>
-          <p className='text-base text-golden rounded-sm font-bold mt-5'>
-            Everything your aquatic pet needs under a roof.
-          </p>
-        </div>
-        <div className="mt-10 w-full flex items-center">
-          <p className='text-sm text-white font-bold mr-5'>
-            Learn more
-          </p>
-          <a href='/' className={'hover:bg-golden hover:text-black bg-purple text-white p-5 mt-5 rounded-full flex items-center transition-all duration-500 font-semibold bounce'}>
-            <FaArrowDown className='text-xl' />
-          </a>
+    <section className='bgimg w-full h-screen flex flex-col items-center overflow-hidden'>
+      <Header />
+      <div className='w-[90%] max-w-7xl h-full mt-10 flex justify-center items-center text-white'>
+        <div className='w-full h-full flex items-center justify-center'>
+          <div className="flex flex-col items-center justify-center w-3/5 h-max text-center">
+            <h1 className="text-2xl font-bold text-blue-400 mb-4">
+              SR Aqua and Pet House
+            </h1>
+            <div className="text-7xl max-sm:text-6xl text-white font-bold">
+              LOOKING FOR
+              <Typewriter
+                onInit={(type) => {
+                  type.typeString('AN AQUARIUM ?')
+                    .pauseFor(2000)
+                    .deleteAll()
+                    .typeString('AN AQUATIC PET ?')
+                    .pauseFor(2000)
+                    .deleteAll()
+                    .start();
+                }}
+                options={{
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </div>
+            <div className="button mt-20">
+              <button className='bg-blue-950 hover:bg-white hover:text-blue-950 text-xl font-bold py-5 px-10 transition duration-500'>Contact Us</button>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="absolute flex justify-center items-center left-2/4 -translate-x-2/4 bottom-10 w-max h-max rounded-md glassmo py-5">
-        <div className="flex justify-center items-center flex-col ml-10 max-sm:ml-5">
-          <p className="text-xl font-bold text-golden">10+</p>
-          <p className="text-base text-purple">Brands</p>
-        </div>
-        <div className="flex justify-center items-center flex-col mx-20 max-sm:mx-5">
-          <p className="text-xl font-bold text-golden">100+</p>
-          <p className="text-base text-purple">Products</p>
-        </div>
-        <div className="flex justify-center items-center flex-col mr-10 max-sm:mr-5">
-          <p className="text-xl font-bold text-golden">200+</p>
-          <p className="text-base text-purple">Customers</p>
-        </div>
-      </div>
-    </div>
+    </section>
   )
 }
 
-export default Home;
+export default Home
