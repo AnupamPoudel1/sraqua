@@ -1,16 +1,20 @@
 {
   "files": {
-    "main.css": "/sraqua/static/css/main.706b4084.css",
-    "main.js": "/sraqua/static/js/main.d367b3b4.js",
+    "main.css": "/sraqua/static/css/main.08d984a4.css",
+    "main.js": "/sraqua/static/js/main.59f510c6.js",
+    "static/media/decorations.jpg": "/sraqua/static/media/decorations.d9a9e61db5072659a538.jpg",
     "static/media/aquarium2.jpg": "/sraqua/static/media/aquarium2.5a3e546e034c7b19c98f.jpg",
     "static/media/bg.jpg": "/sraqua/static/media/bg.b0f2ceabf43542be4083.jpg",
+    "static/media/originalAquarium.jpg": "/sraqua/static/media/originalAquarium.4985da927f8422e46b81.jpg",
+    "static/media/aq.jpg": "/sraqua/static/media/aq.b034fdc0d3d208ea62f2.jpg",
+    "static/media/aquarium3.jpg": "/sraqua/static/media/aquarium3.5449c19768d6ac392d5d.jpg",
     "static/media/logo.jpg": "/sraqua/static/media/logo.dc7d1e58f700278d64de.jpg",
     "index.html": "/sraqua/index.html",
-    "main.706b4084.css.map": "/sraqua/static/css/main.706b4084.css.map",
-    "main.d367b3b4.js.map": "/sraqua/static/js/main.d367b3b4.js.map"
+    "main.08d984a4.css.map": "/sraqua/static/css/main.08d984a4.css.map",
+    "main.59f510c6.js.map": "/sraqua/static/js/main.59f510c6.js.map"
   },
   "entrypoints": [
-    "static/css/main.706b4084.css",
-    "static/js/main.d367b3b4.js"
+    "static/css/main.08d984a4.css",
+    "static/js/main.59f510c6.js"
   ]
 }
