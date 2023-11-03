@@ -1,20 +1,27 @@
 {
   "files": {
-    "main.css": "/sraqua/static/css/main.08d984a4.css",
-    "main.js": "/sraqua/static/js/main.59f510c6.js",
+    "main.css": "/sraqua/static/css/main.6e0eb78c.css",
+    "main.js": "/sraqua/static/js/main.69ef7676.js",
     "static/media/decorations.jpg": "/sraqua/static/media/decorations.d9a9e61db5072659a538.jpg",
     "static/media/aquarium2.jpg": "/sraqua/static/media/aquarium2.5a3e546e034c7b19c98f.jpg",
     "static/media/bg.jpg": "/sraqua/static/media/bg.b0f2ceabf43542be4083.jpg",
     "static/media/originalAquarium.jpg": "/sraqua/static/media/originalAquarium.4985da927f8422e46b81.jpg",
     "static/media/aq.jpg": "/sraqua/static/media/aq.b034fdc0d3d208ea62f2.jpg",
     "static/media/aquarium3.jpg": "/sraqua/static/media/aquarium3.5449c19768d6ac392d5d.jpg",
+    "static/media/bettaFish.jpg": "/sraqua/static/media/bettaFish.5d46da260f7019c64711.jpg",
+    "static/media/flowerHorn.jpg": "/sraqua/static/media/flowerHorn.822ce356ad30f6f4564f.jpg",
+    "static/media/clownFish.jpg": "/sraqua/static/media/clownFish.69f01b98bbf3cbd4cba5.jpg",
+    "static/media/goldFish.jpg": "/sraqua/static/media/goldFish.429cb1f1df595a88ea81.jpg",
     "static/media/logo.jpg": "/sraqua/static/media/logo.dc7d1e58f700278d64de.jpg",
+    "static/media/revicons.eot": "/sraqua/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/sraqua/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/sraqua/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/sraqua/index.html",
-    "main.08d984a4.css.map": "/sraqua/static/css/main.08d984a4.css.map",
-    "main.59f510c6.js.map": "/sraqua/static/js/main.59f510c6.js.map"
+    "main.6e0eb78c.css.map": "/sraqua/static/css/main.6e0eb78c.css.map",
+    "main.69ef7676.js.map": "/sraqua/static/js/main.69ef7676.js.map"
   },
   "entrypoints": [
-    "static/css/main.08d984a4.css",
-    "static/js/main.59f510c6.js"
+    "static/css/main.6e0eb78c.css",
+    "static/js/main.69ef7676.js"
   ]
 }
