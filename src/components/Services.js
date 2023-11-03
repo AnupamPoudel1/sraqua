@@ -7,7 +7,7 @@ import equipments from '../assets/originalAquarium.jpg';
 
 const Services = () => {
     return (
-        <div className='h-min w-full bg-white flex justify-center items-center overflow-hidden relative' id='services'>
+        <section className='h-min w-full bg-white flex justify-center items-center overflow-hidden relative' id='services'>
             {/* for wave effect only */}
             <div className="absolute bottom-0 left-0 w-full h-36 wave wave2"></div>
             <div className="absolute bottom-0 left-0 w-full h-36 wave wave1"></div>
@@ -35,7 +35,7 @@ const Services = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

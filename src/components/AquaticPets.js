@@ -29,7 +29,7 @@ const responsive = {
 
 const AquaticPets = (props) => {
     return (
-        <div className='h-min w-full bg-blue-950 flex justify-center items-center overflow-hidden relative' id='pets'>
+        <section className='h-min w-full bg-blue-950 flex justify-center items-center overflow-hidden relative' id='pets'>
             {/* <div className="absolute bottom-0 left-0 w-full h-36 wave-w wave2"></div>
             <div className="absolute bottom-0 left-0 w-full h-36 wave-w wave1"></div>
             <div className="absolute bottom-0 left-0 w-full h-36 wave-w wave3"></div>
@@ -88,7 +88,7 @@ const AquaticPets = (props) => {
                     </div> */}
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

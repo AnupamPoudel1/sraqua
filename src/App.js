@@ -1,20 +1,26 @@
 import Home from "./components/Home";
-import About from './components/About';
-import Services from "./components/Services";
-import AquaticPets from "./components/AquaticPets";
-import Contact from "./components/Contact";
+import { Routes, Route } from 'react-router-dom';
 import ProductsPage from "./components/ProductsPage";
 
 function App() {
   return (
-    <div className="App">
-      <Home />
+    <div className="app">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<ProductsPage />} />
+      </Routes>
+      {/* <Route path="#about" element={<About />} />
+      <Route path="#services" element={<Services />} />
+      <Route path="#pets" element={<AquaticPets />} />
+      <Route path="#shop" element={<Shop />} />
       <About />
       <Services />
       <AquaticPets />
-      <ProductsPage />
+      <Shop />
       <Contact />
+      <Route path="#contact" element={<Contact />} /> */}
     </div>
+
   );
 }
 

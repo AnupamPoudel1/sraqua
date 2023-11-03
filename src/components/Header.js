@@ -3,6 +3,7 @@ import { RiMenu3Line } from 'react-icons/ri';
 import { RxCross1 } from 'react-icons/rx';
 import logo from '../assets/logo.jpg';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 const Header = () => {
@@ -24,7 +25,8 @@ const Header = () => {
                     <RxCross1 className='mr-2 text-2xl' />
                 </div>
                 <div className="absolute w-max top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center text-center text-white text-2xl font-bold">
-                    <a href="/" className='hover:text-blue-400 mt-5' onClick={handleHide}>Home</a>
+                    <Link to="/" className='hover:text-blue-400 mt-5' onClick={handleHide}>Home</Link>
+                    <Link to="/shop" className='hover:text-blue-400 mt-5' onClick={handleHide}>Our Shop</Link>
                     <a href="#about" className='hover:text-blue-400 mt-5' onClick={handleHide}>About</a>
                     <a href="#services" className='hover:text-blue-400 mt-5' onClick={handleHide}>Services</a>
                     <a href="#pets" className='hover:text-blue-400 mt-5' onClick={handleHide}>Aquatic Pets</a>

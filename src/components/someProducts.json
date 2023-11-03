@@ -1,0 +1,100 @@
+[
+  {
+    "id": 1,
+    "title": "Internal Liquid Filter",
+    "image": "https://i.imgur.com/MsaeRxy.jpg",
+    "category": "internal filter",
+    "price": 55
+  },
+  {
+    "id": 14,
+    "title": "Spounge Filter XIJ-280",
+    "image": "https://i.imgur.com/EbgUe26.jpg",
+    "category": "spoungr-filter",
+    "price": 55
+  },
+  {
+    "id": 19,
+    "title": "Six Seven",
+    "image": "https://i.imgur.com/om16SGb.png",
+    "category": "fish food",
+    "price": 85
+  },
+  {
+    "id": 30,
+    "title": "Sunsun Multifilteration",
+    "image": "https://i.imgur.com/Z7bh0Dh.jpg",
+    "category": "hanging back filter",
+    "price": 55
+  },
+  {
+    "id": 38,
+    "title": "RS-5500",
+    "image": "https://i.imgur.com/sOpDLGw.jpg",
+    "category": "top filter",
+    "price": 55
+  },
+  {
+    "id": 48,
+    "title": "Sobo Magnetic Glass Cleaner",
+    "image": "https://i.imgur.com/eDT4ENS.jpg",
+    "category": "cleaning tools",
+    "price": 55
+  },
+  {
+    "id": 53,
+    "title": "Drift Wood",
+    "image": "https://i.imgur.com/UbkEf7k.jpg",
+    "category": "decoration item",
+    "price": 55
+  },
+  {
+    "id": 55,
+    "title": "Activated Charchoal",
+    "image": "https://i.imgur.com/KYWuDFy.jpg",
+    "category": "filteration media",
+    "price": 55
+  },
+  {
+    "id": 57,
+    "title": "Steel Aquarium Heater xl-999(100w)",
+    "image": "https://i.imgur.com/8H8mALP.jpg",
+    "category": "heater",
+    "price": 55
+  },
+  {
+    "id": 60,
+    "title": "RGB Led Light",
+    "image": "https://i.imgur.com/cNYE6kR.jpg",
+    "category": "light",
+    "price": 55
+  },
+  {
+    "id": 65,
+    "title": "Sticky Circle Thermometer",
+    "image": "https://i.imgur.com/0XGlsHQ.jpg",
+    "category": "thermometer",
+    "price": 55
+  },
+  {
+    "id": 67,
+    "title": "Sobo WP-200d ",
+    "image": "https://i.imgur.com/9WWptFg.jpg",
+    "category": "water pump",
+    "price": 55
+  },
+  {
+    "id": 69,
+    "title": "Wave Maker rs-208a",
+    "image": "https://i.imgur.com/gOhpyk9.jpg",
+    "category": "wave maker",
+    "price": 55
+  },
+  {
+    "id": 80,
+    "title": "Hailea Hap-120",
+    "image": "https://i.imgur.com/DClFwFp.jpg",
+    "category": "air pump",
+    "price": 55
+  }
+]

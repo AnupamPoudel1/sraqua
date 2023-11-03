@@ -1,12 +1,12 @@
 import React from 'react';
 import { TbMail } from 'react-icons/tb';
-import {TbMapPinFilled} from 'react-icons/tb';
+import { TbMapPinFilled } from 'react-icons/tb';
 import { SlScreenSmartphone } from 'react-icons/sl';
 // import { GrMapLocation } from 'react-icons/gr';
 
 const Contact = () => {
     return (
-        <div className='relative h-screen w-full flex justify-center items-center flex-col bg-white' id='contact'>
+        <section className='relative h-screen w-full flex justify-center items-center flex-col bg-white' id='contact'>
             <div className="absolute top-4 z-10 py-3">
                 <h1 className='text-center text-3xl bg-blue-950 text-white p-2 rounded font-bold mt-4'>CONTACT US</h1>
             </div>
@@ -42,7 +42,7 @@ const Contact = () => {
                 </div>
             </div>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.648093281081!2d85.35362577936608!3d27.72814962760981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1bf6cbcdabf1%3A0xfed1d268b3e8ecb0!2sS.R%20Aqua%20and%20Pet%20House!5e0!3m2!1sen!2snp!4v1697608613667!5m2!1sen!2snp" className='absolute h-full w-full grayscale invert' loading="lazy" title='google-maps'></iframe>
-        </div>
+        </section>
     )
 }
 

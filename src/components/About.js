@@ -9,7 +9,7 @@ import aquarium from '../assets/aquarium2.jpg';
 const About = () => {
     return (
         <>
-            <div className='h-min w-full bg-white flex justify-center items-center overflow-hidden relative' id='about'>
+            <section className='h-min w-full bg-white flex justify-center items-center overflow-hidden relative' id='about'>
                 {/* for wave effect only */}
                 <div className="absolute bottom-0 left-0 w-full h-36 wave wave2"></div>
                 <div className="absolute bottom-0 left-0 w-full h-36 wave wave1"></div>
@@ -51,7 +51,7 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
             <div className='h-min w-full bg-blue-950 flex justify-center items-center overflow-hidden relative'>
                 <div className='relative w-[90%] max-w-7xl h-full flex flex-col justify-center items-center text-white overflow-hidden'>
                     <div className="absolute top-1/2 -translate-y-1/2 right-10 w-1/3 h-[90%] max-lg:hidden">
