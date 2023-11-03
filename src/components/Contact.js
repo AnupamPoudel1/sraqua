@@ -6,12 +6,12 @@ import { SlScreenSmartphone } from 'react-icons/sl';
 
 const Contact = () => {
     return (
-        <div className='relative h-screen w-full flex justify-center items-center flex-col bg-white'>
+        <div className='relative h-screen w-full flex justify-center items-center flex-col bg-white' id='contact'>
             <div className="absolute top-4 z-10 py-3">
-                <h1 className='text-center text-3xl bg-blue-950 text-blue-400 p-2 rounded font-bold mt-4'>CONTACT US</h1>
+                <h1 className='text-center text-3xl bg-blue-950 text-white p-2 rounded font-bold mt-4'>CONTACT US</h1>
             </div>
             <div className="absolute left-[5%] sm:top-[50%] -translate-y-[50%] top-[75%] z-10 text-blue-400 bg-blue-950">
-                <h1 className='text-center text-xl text-blue-950 bg- p-2 font-bold'>Contact Info</h1>
+                <h1 className='text-center text-xl text-white bg- p-2 font-bold'>Contact Info</h1>
                 <div className="text-base p-3 flex items-center">
                     <div className="text-blue-400 items-center">
                         <TbMail className='mr-4 text-3xl' />

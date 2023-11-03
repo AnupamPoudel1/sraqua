@@ -1,28 +1,37 @@
-// import React, { useState } from 'react';
-// import ProductCard from './ProductCard';
-// import data from './products.json';
+import React from 'react';
+import ProductsCard from './ProductsCard';
+import data from './products.json';
 
-// const ProductsPage = () => {
+const ProductsPage = () => {
 
-//     return (
-//         <div className='min-h-screen pb-8 flex justify-center items-center flex-col bg-golden'>
-//             <div className="pt-14 pb-2 mt-5">
-//                 <h1 className='text-center text-3xl text-purple'>OUR PRODUCTS</h1>
-//             </div>
-//             <div className="mt-2">
-//                 <p className='text-center text-base text-white w-full px-5 sm:px-14 lg:px-24 pb-4'>This is currently a static page. Buying products from this page is currently not available. We are working on a full e-commerce website. If you want to buy our products please contact us via Contact page or visit the store personally.</p>
-//             </div>
-//             <div className="grid w-full px-5 sm:px-14 lg:px-24 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-5 xl:gap-10 ">
-//                 {
-//                     data.map((item) => {
-//                         return (
-//                             <ProductCard key={item.id} img={item.image} title={item.title} />
-//                         )
-//                     })
-//                 }
-//             </div>
-//         </div>
-//     )
-// }
+    return (
+        <div className='h-min w-full bg-white flex justify-center items-center overflow-x-hidden relative' id='products'>
+            <div className='w-[90%] max-lg:w-full max-w-7xl h-full flex justify-center items-center text-white'>
+                <div className='w-full h-full flex items-center justify-center my-5 max-lg:my-5'>
+                    <div className="flex flex-col items-center justify-center w-full max-lg:w-full max-lg:p-5 h-max text-center">
+                        <h1 className="text-2xl font-bold text-blue-400 mb-4">
+                            Our Shop
+                        </h1>
+                        <div className="text-7xl max-lg:text-6xl text-blue-950 font-bold">
+                            PRODUCTS
+                        </div>
+                        <div className="text-base text-blue-950 text-center mt-5 w-4/5 max-lg:w-full">
+                            This page is still under construction, buying products from here is not possible for now. Please visit the store or contact us if you want to buy our products.
+                        </div>
+                        <div className="grid w-full px-5 sm:px-14 lg:px-24 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-3 xl:gap-5 z-[1001] mt-10">
+                            {
+                                data.map((item) => {
+                                    return (
+                                        <ProductsCard key={item.id} img={item.image} title={item.title} />
+                                    )
+                                })
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
 
-// export default ProductsPage
+export default ProductsPage

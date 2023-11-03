@@ -1,36 +1,42 @@
-// import React from 'react';
-// import bgvideo from '../assets/bgvideo.mp4';
-// import Card from './Card';
-// // import exp from '../assets/Experience.png';
-// // import ProductCard from './ProductCard';
+import React from 'react';
+import ServiceCard from './ServiceCard';
+import aquarium from '../assets/aquarium3.jpg';
+import aquaticPets from '../assets/aq.jpg';
+import decorations from '../assets/decorations.jpg';
+import equipments from '../assets/originalAquarium.jpg';
 
-// const Services = () => {
-//   return (
-//     <div className='h-max pb-14 flex items-center flex-col bg-black'>
-//       <div className="py-8">
-//         <h1 className='text-center text-3xl text-golden'>OUR SERVICES</h1>
-//       </div>
-//       <div className="h-full gap-10 w-full flex px-10 sm:px-14 lg:px-24 justify-between items-center max-sm:justify-center max-lg:flex-col">
-//         <div className="w-2/5 max-lg:w-full">
-//           <h1 className='text-center text-purple mb-5 text-xl'>What We Provide ?</h1>
-//           <p className="text-base text-justify text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint laborum illum autem provident ratione, libero repudiandae molestias! Odit error quasi quisquam sunt illo cumque eius harum tempora, quis eaque et excepturi officia, soluta, odio sapiente obcaecati nulla ipsa! In voluptatum rem nam quae adipisci, quidem aspernatur incidunt quisquam repellendus voluptates.</p>
-//         </div>
-//         <div className="w-2/4 max-lg:w-full">
-//           <video autoPlay loop muted>
-//             <source src={bgvideo} />
-//           </video>
-//         </div>
-//       </div>
-//       <div className="w-full mt-20">
-//         <h1 className='text-center text-purple text-xl'>Why Choose Us ?</h1>
-//         <div className="mt-8 grid w-full px-10 sm:px-14 lg:px-24 grid-cols-3 gap-x-10 gap-y-10 max-lg:grid-cols-2 max-sm:grid-cols-1" >
-//           <Card title="Experience" description="We have been in this field for a long time now, so our experience will come in handy."/>
-//           <Card title="Authenticity" description="Original products from relaible and authentic brands."/>
-//           <Card title="Price" description="Our products price are reasonable and are not overpriced"/>
-//         </div>
-//       </div>
-//     </div>
-//   )
-// }
+const Services = () => {
+    return (
+        <div className='h-min w-full bg-white flex justify-center items-center overflow-hidden relative' id='services'>
+            {/* for wave effect only */}
+            <div className="absolute bottom-0 left-0 w-full h-36 wave wave2"></div>
+            <div className="absolute bottom-0 left-0 w-full h-36 wave wave1"></div>
+            <div className="absolute bottom-0 left-0 w-full h-36 wave wave3"></div>
+            <div className="absolute bottom-0 left-0 w-full h-36 wave wave4"></div>
 
-// export default Services;
+            <div className='w-[90%] max-lg:w-full max-w-7xl h-full flex justify-center items-center text-white'>
+                <div className='w-full h-full flex items-center justify-center my-20 max-lg:my-12'>
+                    <div className="flex flex-col items-center justify-center w-full max-lg:w-full max-lg:p-5 h-max text-center">
+                        <h1 className="text-2xl font-bold text-blue-400 mb-4">
+                            Our Services
+                        </h1>
+                        <div className="text-7xl max-lg:text-6xl text-blue-950 font-bold">
+                            What Are You Looking For ?
+                        </div>
+                        <div className="text-base text-blue-950 text-center mt-5 w-4/5 max-lg:w-full">
+                            We offer beautiful aquatic pets and aquariums at very reasonable price. Not only that we also have beautiful decorations and equipments to make your aquatic pet happy and healthy in his new aquarium. We also provide healthy fish food for your aquatic friend.
+                        </div>
+                        <div className="grid w-full px-5 sm:px-14 lg:px-24 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-5 xl:gap-10 z-[1001] mt-10">
+                            <ServiceCard img={aquarium} title="Aquarium" />
+                            <ServiceCard img={decorations} title="Decorations" />
+                            <ServiceCard img={equipments} title="Equipments" />
+                            <ServiceCard img={aquaticPets} title="Pets and foods" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Services

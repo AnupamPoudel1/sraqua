@@ -1,6 +1,6 @@
 import React from 'react';
 import { BiSolidMedal } from 'react-icons/bi';
-import { BsFillPersonCheckFill, BsBox2HeartFill } from 'react-icons/bs';
+import { BsBox2HeartFill } from 'react-icons/bs';
 import { GiMoneyStack, GiCirclingFish } from 'react-icons/gi';
 import { TiTick } from 'react-icons/ti';
 import { RiEmotionHappyFill } from 'react-icons/ri';
@@ -9,7 +9,7 @@ import aquarium from '../assets/aquarium2.jpg';
 const About = () => {
     return (
         <>
-            <div className='h-min w-full bg-white flex justify-center items-center overflow-hidden relative'>
+            <div className='h-min w-full bg-white flex justify-center items-center overflow-hidden relative' id='about'>
                 {/* for wave effect only */}
                 <div className="absolute bottom-0 left-0 w-full h-36 wave wave2"></div>
                 <div className="absolute bottom-0 left-0 w-full h-36 wave wave1"></div>

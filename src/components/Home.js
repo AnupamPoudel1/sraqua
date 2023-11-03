@@ -4,7 +4,7 @@ import Typewriter from 'typewriter-effect';
 
 const Home = () => {
   return (
-    <section className='bgimg w-full h-screen flex flex-col items-center overflow-hidden'>
+    <section className='bgimg w-full h-screen flex flex-col items-center overflow-hidden' id='home'>
       <Header />
       <div className='w-[90%] max-w-7xl h-full mt-10 flex justify-center items-center text-white'>
         <div className='w-full h-full flex items-center justify-center'>
