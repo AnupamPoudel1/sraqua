@@ -12,6 +12,10 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
+        path: 'sraqua',
+        element: <Home />
+      },
+      {
         path: '',
         element: <Home />
       },
