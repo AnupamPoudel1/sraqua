@@ -27,10 +27,10 @@ const Services = () => {
                             We offer beautiful aquatic pets and aquariums at very reasonable price. Not only that we also have beautiful decorations and equipments to make your aquatic pet happy and healthy in his new aquarium. We also provide healthy fish food for your aquatic friend.
                         </div>
                         <div className="grid w-full px-5 sm:px-14 lg:px-24 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-5 xl:gap-10 z-[1001] mt-10">
-                            <ServiceCard img={aquarium} title="Aquarium" />
-                            <ServiceCard img={decorations} title="Decorations" />
-                            <ServiceCard img={equipments} title="Equipments" />
-                            <ServiceCard img={aquaticPets} title="Pets and foods" />
+                            <ServiceCard img={aquarium} title="Aquarium" link='/shop/'/>
+                            <ServiceCard img={decorations} title="Decorations" link='/shop/decoration item'/>
+                            <ServiceCard img={equipments} title="Equipments" link='/shop/'/>
+                            <ServiceCard img={aquaticPets} title="Pets and foods" link='/shop/fish food'/>
                         </div>
                     </div>
                 </div>

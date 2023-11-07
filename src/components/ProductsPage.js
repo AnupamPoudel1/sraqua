@@ -11,7 +11,7 @@ const ProductsPage = () => {
         <section className='h-min w-full bg-white flex justify-center items-center overflow-x-hidden relative' id='shop'>
             <div className='w-[90%] max-lg:w-full max-w-7xl h-full flex flex-col justify-center items-center text-white relative'>
                 <Link to='/' className="absolute top-2 left-2 w-max flex justify-center items-center text-blue-950 transition-all duration-300 cursor-pointer text-base max-lg:text-sm">
-                    <div className="rounded-full bg-blue-950 w-16 max-lg:w-10 h-16 max-lg:h-10 p-2 text-white hover:text-blue-950 hover:bg-white transition-all duration-300 mr-1">
+                    <div className="rounded-full bg-blue-950 w-10 h-10 p-2 text-white hover:text-blue-950 hover:bg-white transition-all duration-300 mr-1">
                         <AiFillHome className='w-full h-full' />
                     </div>
                     Goto Home
@@ -19,11 +19,11 @@ const ProductsPage = () => {
                 <div className='w-full h-full flex items-center justify-center my-5 max-lg:my-5'>
                     <div className="flex flex-col items-center justify-center w-full max-lg:w-full max-lg:p-5 h-max text-center">
                         <h1 className="text-2xl font-bold text-blue-400 mb-4">
-                            Our Shop
+                            Our Products
                         </h1>
-                        <div className="text-2xl max-lg:text-6xl text-blue-950 font-bold">
+                        {/* <div className="text-2xl max-lg:text-6xl text-blue-950 font-bold">
                             ALL PRODUCTS
-                        </div>
+                        </div> */}
                         <div className="text-base text-blue-950 text-center mt-5 w-4/5 max-lg:w-full">
                             This page is still under construction, buying products from here is not possible for now. Please visit the store or goto <a href="/" className='text-blue-950 font-bold hover:text-blue-400'>Contact</a> page if you want to buy our products.
                         </div>

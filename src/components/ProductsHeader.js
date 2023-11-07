@@ -5,7 +5,7 @@ const ProductsHeader = () => {
     return (
         <div className="w-full px-5 flex justify-center items-center flex-wrap gap-4 mt-10 ">
             <div>
-                <NavLink to="/shop" className={({ isActive }) => `border bg-whtie w-max px-3 rounded-sm border-blue-950 text-lg hover:bg-blue-950 hover:text-blue-400 cursor-pointer ${isActive ? "text-white bg-blue-950" : "text-blue-950 bg-white"}`}>
+                <NavLink to="/shop/" className={({ isActive }) => `border bg-whtie w-max px-3 rounded-sm border-blue-950 text-lg hover:bg-blue-950 hover:text-blue-400 cursor-pointer ${isActive ? "text-white bg-blue-950" : "text-blue-950 bg-white"}`}>
                     All
                 </NavLink>
             </div>
