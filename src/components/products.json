@@ -87,14 +87,14 @@
     "id": 13,
     "title": "Spounge Filter XIJ-2902",
     "image": "https://i.imgur.com/oXHKOoM.jpg",
-    "category": "spoung-filter",
+    "category": "spounge-filter",
     "price": 55
   },
   {
     "id": 14,
     "title": "Spounge Filter XIJ-280",
     "image": "https://i.imgur.com/EbgUe26.jpg",
-    "category": "spoungr-filter",
+    "category": "spounge-filter",
     "price": 55
   },
   {
@@ -108,7 +108,7 @@
     "id": 16,
     "title": "Spounge Filter XIJ-180",
     "image": "https://i.imgur.com/18KZhx6.jpg",
-    "category": "spoung-filter",
+    "category": "spounge-filter",
     "price": 55
   },
   {
