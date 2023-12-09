@@ -1,11 +1,14 @@
 import React from 'react';
 import PetsCard from './PetsCard';
-import bettaFish from '../assets/bettaFish.jpg';
-import goldFish from '../assets/goldFish.jpg';
-import flowerHorn from '../assets/flowerHorn.jpg';
-import clownFish from '../assets/clownFish.jpg';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import fish1 from '../assets/fish1 (1).png';
+import fish2 from '../assets/fish1 (2).png';
+import fish3 from '../assets/fish1 (3).png';
+import fish4 from '../assets/fish1 (4).png';
+import fish5 from '../assets/fish1 (5).png';
+import fish6 from '../assets/fish1 (6).png';
+import fish7 from '../assets/fish1 (7).png';
 
 const responsive = {
     superLargeDesktop: {
@@ -30,10 +33,6 @@ const responsive = {
 const AquaticPets = (props) => {
     return (
         <section className='h-min w-full bg-blue-950 flex justify-center items-center overflow-hidden relative' id='pets'>
-            {/* <div className="absolute bottom-0 left-0 w-full h-36 wave-w wave2"></div>
-            <div className="absolute bottom-0 left-0 w-full h-36 wave-w wave1"></div>
-            <div className="absolute bottom-0 left-0 w-full h-36 wave-w wave3"></div>
-            <div className="absolute bottom-0 left-0 w-full h-36 wave-w wave4"></div> */}
             <div className='w-[90%] max-lg:w-full max-w-7xl h-full flex justify-center items-center text-white'>
                 <div className='w-full h-full flex items-center justify-center my-20 max-lg:my-12'>
                     <div className="flex flex-col items-center justify-center w-full max-lg:w-full max-lg:p-5 h-max text-center">
@@ -65,27 +64,16 @@ const AquaticPets = (props) => {
                                 dotListClass="custom-dot-list-style"
                                 itemClass="carousel-item-padding-40-px"
                             >
-                                <div><PetsCard img={bettaFish} title="Betta Fish" /></div>
-                                <div><PetsCard img={goldFish} title="Gold Fish" /></div>
-                                <div><PetsCard img={flowerHorn} title="Flowerhorn Fish" /></div>
-                                <div><PetsCard img={clownFish} title="Clown Fish" /></div>
+                                <div><PetsCard img={fish1} title="Fish" /></div>
+                                <div><PetsCard img={fish3} title="Fish" /></div>
+                                <div><PetsCard img={fish4} title="Fish" /></div>
+                                <div><PetsCard img={fish2} title="Fish" /></div>
+                                <div><PetsCard img={fish5} title="Fish" /></div>
+                                <div><PetsCard img={fish6} title="Fish" /></div>
+                                <div><PetsCard img={fish7} title="Fish" /></div>
                             </Carousel>
-                            {/*
-                             <ServiceCard img={decorations} title="Decorations" />
-                            <PetsCard img={bettaFish} title="Betta Fish" />
-                            <PetsCard img={goldFish} title="Gold Fish" />
-                            <PetsCard img={flowerHorn} title="Flowerhorn Fish" />
-                            <PetsCard img={clownFish} title="Clown Fish" />
-                            <PetsCard img={clownFish} title="Clown Fish" />
-                            <PetsCard img={clownFish} title="Clown Fish" />
-                            <ServiceCard img={equipments} title="Equipments" />
-                            <ServiceCard img={aquaticPets} title="Pets and foods" /> 
-                        */}
                         </div>
                     </div>
-                    {/* <div className="rounded-md bg-blue-950 w-2/5 h-[90%] text-white hover:text-blue-950 hover:bg-white transition-all duration-300 overflow-hidden">
-                        <img src={img} alt="services image" className='h-full w-full object-cover transition-all duration-500' />
-                    </div> */}
                 </div>
             </div>
         </section>
