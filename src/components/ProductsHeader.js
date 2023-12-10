@@ -1,80 +1,81 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { RiMenu3Line, RiArrowDropDownLine, RiArrowDropUpLine } from 'react-icons/ri';
+import { RxCross1 } from 'react-icons/rx';
+import logo from '../assets/logo.jpg';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ProductsHeader = () => {
+    const [show, setShow] = useState(false);
+    const [dropP, setDropP] = useState(false);
+    const [dropF, setDropF] = useState(false);
+
+    const handleShow = () => {
+        setShow(true);
+    }
+    const handleHide = () => {
+        setShow(false);
+    }
+    const handleDropP = () => {
+        setDropP(!dropP);
+    }
+    const handleDropF = () => {
+        setDropF(!dropF);
+    }
+
     return (
-        <div className="w-full px-5 flex justify-center items-center flex-wrap gap-4 mt-10 ">
-            <div>
-                <NavLink to="/shop/" className={({ isActive }) => `border bg-whtie w-max px-3 rounded-sm border-blue-950 text-lg hover:bg-blue-950 hover:text-blue-400 cursor-pointer ${isActive ? "text-white bg-blue-950" : "text-blue-950 bg-white"}`}>
-                    All
-                </NavLink>
+        <>
+            <div className={show ? "absolute top-0 left-[0%] h-screen w-full bg-blue-950 flex items-center justify-center z-10 transition-all delay-150 duration-300" : "h-screen w-full absolute -left-[100%] top-0 bg-blue-950 flex flex-col items-center z-10 transtion-all delay-150 duration-300"}>
+                <div className="absolute right-1/2 top-0 translate-x-1/2 h-20 w-20 mt-10">
+                    <img src={logo} alt="" className='h-full w-full bg-cover rounded-xl' />
+                </div>
+                <div className='absolute right-32 max-sm:right-10 top-12 text-white cursor-pointer hover:text-blue-400' onClick={handleHide}>
+                    <RxCross1 className='mr-2 text-2xl' />
+                </div>
+                <div className="absolute w-max top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center text-center text-white text-2xl font-bold">
+                    <Link to="/" className='hover:text-blue-400 mt-5' onClick={handleHide}>Home</Link>
+                    <div className="relative cursor-pointer mt-2 flex flex-col justify-center items-center" onClick={handleDropF}>
+                        <div className="flex justify-center items-center">Filters
+                            {!dropF ? <RiArrowDropDownLine className='font-bold text-5xl' /> : <RiArrowDropUpLine className='font-bold text-5xl' />}
+                        </div>
+                        <div className={dropF ? 'absolute top-12 w-max flex-col justify-center items-center flex bg-white rounded-md text-black px-5 z-10' : 'hidden'}>
+                            <Link to="/shop/internal filter" className='hover:text-blue-400 my-2' onClick={handleHide}>Internal Filter</Link>
+                            <Link to="/shop/spounge-filter" className='hover:text-blue-400 my-2' onClick={handleHide}>Spounge Filter</Link>
+                            <Link to="/shop/top filter" className='hover:text-blue-400 my-2' onClick={handleHide}>Top Filter</Link>
+                            <Link to="/shop/hanging back filter" className='hover:text-blue-400 my-2' onClick={handleHide}>Hanging Back Filter</Link>
+                        </div>
+                    </div>
+                    <div className="relative cursor-pointer mt-1 flex flex-col justify-center items-center" onClick={handleDropP}>
+                        <div className="flex justify-center items-center">Pumps
+                            {!dropP ? <RiArrowDropDownLine className='font-bold text-5xl' /> : <RiArrowDropUpLine className='font-bold text-5xl' />}
+                        </div>
+                        <div className={dropP ? 'absolute top-12 w-max flex-col justify-center items-center flex bg-white rounded-md text-black px-5 z-10' : 'hidden'}>
+                            <Link to="/shop/water pump" className='hover:text-blue-400 my-2' onClick={handleHide}>Water Pump</Link>
+                            <Link to="/shop/air pump" className='hover:text-blue-400 my-2' onClick={handleHide}>Air Pump</Link>
+                            <Link to="/shop/wave maker" className='hover:text-blue-400 my-2' onClick={handleHide}>Wave Maker</Link>
+                        </div>
+                    </div>
+                    <Link to="/shop/cleaning tools" className='hover:text-blue-400 my-2' onClick={handleHide}>Cleaning tools</Link>
+                    <Link to="/shop/filteration media" className='hover:text-blue-400 my-2' onClick={handleHide}>Filteration Media</Link>
+                    <Link to="/shop/heater" className='hover:text-blue-400 my-2' onClick={handleHide}>Heater</Link>
+                    <Link to="/shop/light" className='hover:text-blue-400 my-2' onClick={handleHide}>Light</Link>
+                    <Link to="/shop/thermometer" className='hover:text-blue-400 my-2' onClick={handleHide}>Thermometer</Link>
+                </div>
             </div>
-            <div>
-                <NavLink to="/shop/internal filter" className={({ isActive }) => `border bg-whtie w-max px-3 rounded-sm border-blue-950 text-lg hover:bg-blue-950 hover:text-blue-400 cursor-pointer ${isActive ? "text-white bg-blue-950" : "text-blue-950 bg-white"}`}>
-                    Internal Filter
-                </NavLink>
+            <div className='relative w-[90%] max-w-7xl h-max flex justify-center items-center text-xl font-bold text-black'>
+                <div className="w-full flex justify-between items-center mt-10">
+                    <div className="flex justify-center items-center text-xl font-bold cursor-pointer hover:text-blue-950" onClick={handleShow}>
+                        Products<RiMenu3Line className='ml-2 text-2xl' />
+                    </div>
+                    <div className='max-sm:hidden'>
+                        +977 986-******
+                    </div>
+                </div>
+                <div className="absolute right-1/2 top-0 translate-x-1/2 h-20 w-20 mt-10">
+                    <img src={logo} alt="" className='h-full w-full bg-cover rounded-xl' />
+                </div>
             </div>
-            <div>
-                <NavLink to="/shop/spounge-filter" className={({ isActive }) => `border bg-whtie w-max px-3 rounded-sm border-blue-950 text-lg hover:bg-blue-950 hover:text-blue-400 cursor-pointer ${isActive ? "text-white bg-blue-950" : "text-blue-950 bg-white"}`}>
-                    Spoung Filter
-                </NavLink>
-            </div>
-            <div>
-                <NavLink to="/shop/fish food" className={({ isActive }) => `border bg-whtie w-max px-3 rounded-sm border-blue-950 text-lg hover:bg-blue-950 hover:text-blue-400 cursor-pointer ${isActive ? "text-white bg-blue-950" : "text-blue-950 bg-white"}`}>
-                    Fish Food
-                </NavLink>
-            </div>
-            <div>
-                <NavLink to="/shop/hanging back filter" className={({ isActive }) => `border bg-whtie w-max px-3 rounded-sm border-blue-950 text-lg hover:bg-blue-950 hover:text-blue-400 cursor-pointer ${isActive ? "text-white bg-blue-950" : "text-blue-950 bg-white"}`}>
-                    Hanging Back Filter
-                </NavLink>
-            </div>
-            <div>
-                <NavLink to="/shop/top filter" className={({ isActive }) => `border bg-whtie w-max px-3 rounded-sm border-blue-950 text-lg hover:bg-blue-950 hover:text-blue-400 cursor-pointer ${isActive ? "text-white bg-blue-950" : "text-blue-950 bg-white"}`}>
-                    Top Filter
-                </NavLink>
-            </div>
-            <div>
-                <NavLink to="/shop/cleaning tools" className={({ isActive }) => `border bg-whtie w-max px-3 rounded-sm border-blue-950 text-lg hover:bg-blue-950 hover:text-blue-400 cursor-pointer ${isActive ? "text-white bg-blue-950" : "text-blue-950 bg-white"}`}>
-                    Cleaning Tools
-                </NavLink>
-            </div>
-            <div>
-                <NavLink to="/shop/decoration item" className={({ isActive }) => `border bg-whtie w-max px-3 rounded-sm border-blue-950 text-lg hover:bg-blue-950 hover:text-blue-400 cursor-pointer ${isActive ? "text-white bg-blue-950" : "text-blue-950 bg-white"}`}>
-                    Decoration Item
-                </NavLink>
-            </div>
-            <div>
-                <NavLink to="/shop/filteration media" className={({ isActive }) => `border bg-whtie w-max px-3 rounded-sm border-blue-950 text-lg hover:bg-blue-950 hover:text-blue-400 cursor-pointer ${isActive ? "text-white bg-blue-950" : "text-blue-950 bg-white"}`}>
-                    Filteration Media
-                </NavLink>
-            </div>
-            <div>
-                <NavLink to="/shop/heater" className={({ isActive }) => `border bg-whtie w-max px-3 rounded-sm border-blue-950 text-lg hover:bg-blue-950 hover:text-blue-400 cursor-pointer ${isActive ? "text-white bg-blue-950" : "text-blue-950 bg-white"}`}>
-                    Heater
-                </NavLink>
-            </div>
-            <div>
-                <NavLink to="/shop/light" className={({ isActive }) => `border bg-whtie w-max px-3 rounded-sm border-blue-950 text-lg hover:bg-blue-950 hover:text-blue-400 cursor-pointer ${isActive ? "text-white bg-blue-950" : "text-blue-950 bg-white"}`}>
-                    Light
-                </NavLink>
-            </div>
-            <div>
-                <NavLink to="/shop/thermometer" className={({ isActive }) => `border bg-whtie w-max px-3 rounded-sm border-blue-950 text-lg hover:bg-blue-950 hover:text-blue-400 cursor-pointer ${isActive ? "text-white bg-blue-950" : "text-blue-950 bg-white"}`}>
-                    Thermometer
-                </NavLink>
-            </div>
-            <div>
-                <NavLink to="/shop/wave maker" className={({ isActive }) => `border bg-whtie w-max px-3 rounded-sm border-blue-950 text-lg hover:bg-blue-950 hover:text-blue-400 cursor-pointer ${isActive ? "text-white bg-blue-950" : "text-blue-950 bg-white"}`}>
-                    Wave Maker
-                </NavLink>
-            </div>
-            <div>
-                <NavLink to="/shop/air pump" className={({ isActive }) => `border bg-whtie w-max px-3 rounded-sm border-blue-950 text-lg hover:bg-blue-950 hover:text-blue-400 cursor-pointer ${isActive ? "text-white bg-blue-950" : "text-blue-950 bg-white"}`}>
-                    Air Pump
-                </NavLink>
-            </div>
-        </div>
+        </>
     )
 }
 

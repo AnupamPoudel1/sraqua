@@ -54,47 +54,5 @@
     "image": "https://i.imgur.com/KYWuDFy.jpg",
     "category": "filteration media",
     "price": 55
-  },
-  {
-    "id": 57,
-    "title": "Steel Aquarium Heater xl-999(100w)",
-    "image": "https://i.imgur.com/8H8mALP.jpg",
-    "category": "heater",
-    "price": 55
-  },
-  {
-    "id": 60,
-    "title": "RGB Led Light",
-    "image": "https://i.imgur.com/cNYE6kR.jpg",
-    "category": "light",
-    "price": 55
-  },
-  {
-    "id": 65,
-    "title": "Sticky Circle Thermometer",
-    "image": "https://i.imgur.com/0XGlsHQ.jpg",
-    "category": "thermometer",
-    "price": 55
-  },
-  {
-    "id": 67,
-    "title": "Sobo WP-200d ",
-    "image": "https://i.imgur.com/9WWptFg.jpg",
-    "category": "water pump",
-    "price": 55
-  },
-  {
-    "id": 69,
-    "title": "Wave Maker rs-208a",
-    "image": "https://i.imgur.com/gOhpyk9.jpg",
-    "category": "wave maker",
-    "price": 55
-  },
-  {
-    "id": 80,
-    "title": "Hailea Hap-120",
-    "image": "https://i.imgur.com/DClFwFp.jpg",
-    "category": "air pump",
-    "price": 55
   }
 ]

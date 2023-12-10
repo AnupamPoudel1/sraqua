@@ -15,9 +15,6 @@ const Shop = () => {
                         <div className="text-7xl max-lg:text-6xl text-blue-950 font-bold">
                             PRODUCTS
                         </div>
-                        <div className="text-base text-blue-950 text-center mt-5 w-4/5 max-lg:w-full">
-                            These are some of our major products. If you want to see more goto <Link to="/shop/" className='text-blue-950 font-bold hover:text-blue-400'>Shop</Link> Page. If you want to buy something please contact us via the <a href="#contact" className='text-blue-950 font-bold hover:text-blue-400'>Contact</a> page.
-                        </div>
                         <div className="grid w-full px-5 sm:px-14 lg:px-24 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-3 xl:gap-5 z-[1001] mt-10">
                             {
                                 data.map((item) => {
@@ -26,6 +23,13 @@ const Shop = () => {
                                     )
                                 })
                             }
+                        </div>
+                        <div className="button mt-10">
+                            <button className='bg-white text-black hover:drop-shadow-lg hover:text-blue-950 text-xl font-bold py-5 px-10 transition duration-500'>
+                                <Link to='/shop'>
+                                    See More
+                                </Link>
+                            </button>
                         </div>
                     </div>
                 </div>
