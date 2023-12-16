@@ -26,7 +26,7 @@ const Footer = () => {
                             <BsTiktok className='w-full h-full' />
                         </div>
                     </a> */}
-                    <a href='/' target='_blank' rel='noreferrer' className="flex flex-col justifty-center items-center transition-all duration-300 cursor-pointer text-base max-lg:text-sm">
+                    <a href='https://www.youtube.com/@GoldfishNepal' target='_blank' rel='noreferrer' className="flex flex-col justifty-center items-center transition-all duration-300 cursor-pointer text-base max-lg:text-sm">
                         <div className="rounded-full bg-blue-950 text-xl p-2 text-white hover:text-blue-950 hover:bg-white transition-all duration-300">
                             <BsYoutube className='w-full h-full' />
                         </div>

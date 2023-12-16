@@ -8,6 +8,7 @@ import Contact from "../components/Contact";
 // import Footer from './Footer';
 import Shop from "../components/Shop";
 import { FaStoreAlt } from 'react-icons/fa';
+import { AiFillMessage } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -53,19 +54,18 @@ const Home = () => {
       <AquaticPets />
       <Shop />
       <Contact />
-      {/* <Footer className="relative"/> */}
-      {/* <Link to='/shop/' className="fixed bottom-[25%] right-[2%] z-[2000] w-max flex flex-col justify-center items-center text-blue-400 transition-all duration-300 cursor-pointer text-base max-lg:text-sm">
-        <div className="rounded-full bg-white w-16 max-lg:w-10 h-16 max-lg:h-10 p-2 text-blue-950 hover:text-blue-950 hover:bg-blue-400 transition-all duration-300 mr-1">
-          <FaStoreAlt className='w-full h-full' />
-        </div>
-        Goto Shop
-      </Link> */}
-      <Link to='/shop/' className="fixed bottom-[25%] right-[2%] z-[2000] w-max flex flex-col justify-center items-center text-blue-400 transition-all duration-300 cursor-pointer text-base max-lg:text-sm">
+      <Link to='/shop/' className="fixed bottom-[18%] max-md:bottom-[15%] right-[2%] z-[2000] w-max flex flex-col justify-center items-center text-blue-400 transition-all duration-300 cursor-pointer text-base max-lg:text-sm">
         <div className="rounded-full bg-white w-12 h-12 p-2 text-blue-950 hover:text-blue-950 hover:bg-blue-400 transition-all duration-300 mr-1">
           <FaStoreAlt className='w-full h-full' />
         </div>
         Shop
       </Link>
+      <a href='https://www.facebook.com/InfoFish' target='_blank' rel='noreferrer' className="fixed bottom-[5%] right-[2%] z-[2000] w-max flex flex-col justify-center items-center text-blue-400 transition-all duration-300 cursor-pointer text-base max-lg:text-sm">
+        <div className="rounded-full bg-white w-12 h-12 p-2 text-blue-950 hover:text-blue-950 hover:bg-blue-400 transition-all duration-300 mr-1">
+          <AiFillMessage className='w-full h-full' />
+        </div>
+        Chat
+      </a>
     </>
   )
 }

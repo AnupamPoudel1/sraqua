@@ -2,7 +2,7 @@ import React from 'react';
 import ProductsCard from './ProductsCard';
 // import Footer from './Footer';
 import data from './products.json';
-import { AiFillHome } from 'react-icons/ai';
+import { AiFillHome, AiFillMessage } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import ProductsHeader from './ProductsHeader';
 
@@ -18,7 +18,7 @@ const ProductsPage = () => {
                     </div>
                     Goto Home
                 </Link> */}
-                <div className='w-full h-full flex items-center justify-center mt-20 my-5 max-lg:my-5'>
+                <div className='w-full h-full flex items-center justify-center mt-20 md:mt-5 my-5 max-lg:my-5'>
                     <div className="flex flex-col items-center justify-center w-full max-lg:w-full max-lg:p-5 h-max text-center">
                         <h1 className="text-2xl font-bold text-blue-400 mb-4">
                             Our Shop
@@ -41,12 +41,18 @@ const ProductsPage = () => {
                     </div>
                 </div>
             </div>
-            <Link to='/' className="fixed bottom-[25%] right-[2%] z-[2000] w-max flex flex-col justify-center items-center text-blue-400 transition-all duration-300 cursor-pointer text-base max-lg:text-sm">
+            <Link to='/' className="fixed bottom-[18%] max-sm:bottom-[15%] right-[2%] z-[2000] w-max flex flex-col justify-center items-center text-blue-400 transition-all duration-300 cursor-pointer text-base max-lg:text-sm">
                 <div className="rounded-full bg-white w-12 h-12 p-2 text-blue-950 hover:text-blue-950 hover:bg-blue-400 transition-all duration-300 mr-1">
                     <AiFillHome className='w-full h-full' />
                 </div>
                 Home
             </Link>
+            <a href='https://www.facebook.com/InfoFish' target='_blank' rel='noreferrer' className="fixed bottom-[5%] right-[2%] z-[2000] w-max flex flex-col justify-center items-center text-blue-400 transition-all duration-300 cursor-pointer text-base max-lg:text-sm">
+                <div className="rounded-full bg-white w-12 h-12 p-2 text-blue-950 hover:text-blue-950 hover:bg-blue-400 transition-all duration-300 mr-1">
+                    <AiFillMessage className='w-full h-full' />
+                </div>
+                Chat
+            </a>
             {/* <Footer className="absolute"/> */}
         </section>
     )

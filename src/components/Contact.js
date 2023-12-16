@@ -49,7 +49,7 @@ const Contact = () => {
                         <p className='text-white'>Sr Aqua and Pet House</p>
                     </div>
                 </a>
-                <a href='https://youtu.be/0FXAF7GUyWM?si=t3MXKnWqo2_o-8jt' target='_blank' rel='noreferrer' className="text-base p-3 flex items-center cursor-pointer">
+                <a href='https://www.youtube.com/@GoldfishNepal' target='_blank' rel='noreferrer' className="text-base p-3 flex items-center cursor-pointer">
                     <div className="text-blue-400 items-center">
                         <BsYoutube className='mr-4 text-3xl' />
                     </div>
