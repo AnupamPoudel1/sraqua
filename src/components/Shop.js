@@ -23,6 +23,7 @@ const Shop = () => {
                                             key={item.id}
                                             img={item.image}
                                             title={item.title}
+                                            price={item.price}
                                         />
                                     )
                                 })
