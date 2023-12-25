@@ -19,7 +19,11 @@ const Shop = () => {
                             {
                                 data.map((item) => {
                                     return (
-                                        <ProductsCard key={item.id} img={item.image} title={item.title} />
+                                        <ProductsCard
+                                            key={item.id}
+                                            img={item.image}
+                                            title={item.title}
+                                        />
                                     )
                                 })
                             }

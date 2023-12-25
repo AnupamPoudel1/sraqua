@@ -5,13 +5,15 @@ import About from '../components/About';
 import Services from "../components/Services";
 import AquaticPets from "../components/AquaticPets";
 import Contact from "../components/Contact";
-// import Footer from './Footer';
 import Shop from "../components/Shop";
 import { FaStoreAlt } from 'react-icons/fa';
 import { AiFillMessage } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
+  const handleScroll = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }
   return (
     <>
       <section className='bgimg w-full h-screen flex flex-col items-center overflow-x-hidden' id='home'>
@@ -54,12 +56,12 @@ const Home = () => {
       <AquaticPets />
       <Shop />
       <Contact />
-      <Link to='/shop/' className="fixed bottom-[18%] max-md:bottom-[15%] right-[2%] z-[2000] w-max flex flex-col justify-center items-center text-blue-400 transition-all duration-300 cursor-pointer text-base max-lg:text-sm">
-        <div className="rounded-full bg-white w-12 h-12 p-2 text-blue-950 hover:text-blue-950 hover:bg-blue-400 transition-all duration-300 mr-1">
+      <Link to='/shop/' className="fixed bottom-[18%] max-md:bottom-[15%] right-[2%] z-[2000] w-max flex flex-col justify-center items-center text-blue-400 transition-all duration-300 cursor-pointer text-base max-lg:text-sm" onClick={handleScroll}>
+        <div className="rounded-full bg-white w-12 h-12 p-2 text-blue-950 hover:text-blue-950 hover:bg-blue-400 transition-all duration-300 mr-1" >
           <FaStoreAlt className='w-full h-full' />
         </div>
         Shop
-      </Link>
+      </Link >
       <a href='https://www.facebook.com/InfoFish' target='_blank' rel='noreferrer' className="fixed bottom-[5%] right-[2%] z-[2000] w-max flex flex-col justify-center items-center text-blue-400 transition-all duration-300 cursor-pointer text-base max-lg:text-sm">
         <div className="rounded-full bg-white w-12 h-12 p-2 text-blue-950 hover:text-blue-950 hover:bg-blue-400 transition-all duration-300 mr-1">
           <AiFillMessage className='w-full h-full' />

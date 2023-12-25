@@ -1,17 +1,17 @@
 [
   {
     "id": 1,
-    "title": "Internal Liquid Filter",
+    "title": "Jyngye JY 800F",
     "image": "https://i.imgur.com/MsaeRxy.jpg",
     "category": "internal filter",
-    "price": 55
+    "price": 1300
   },
   {
     "id": 14,
-    "title": "Spounge Filter XIJ-280",
-    "image": "https://i.imgur.com/EbgUe26.jpg",
-    "category": "spoungr-filter",
-    "price": 55
+    "title": "Spounge Filter XIJ-2835",
+    "image": "https://i.imgur.com/FrkjUPE.jpg",
+    "category": "spounge-filter",
+    "price": 200
   },
   {
     "id": 19,
@@ -21,38 +21,38 @@
     "price": 85
   },
   {
-    "id": 30,
-    "title": "Sunsun Multifilteration",
-    "image": "https://i.imgur.com/Z7bh0Dh.jpg",
-    "category": "hanging back filter",
-    "price": 55
+    "id": 19,
+    "title": "Cichlid Herbivore",
+    "image": "https://i.imgur.com/jAdrXeL.png",
+    "category": "fish food ",
+    "price": 350
   },
   {
     "id": 38,
-    "title": "RS-5500",
-    "image": "https://i.imgur.com/sOpDLGw.jpg",
+    "title": "WP-2660",
+    "image": "https://i.imgur.com/rmkQZRx.jpg",
     "category": "top filter",
-    "price": 55
+    "price": 1250
   },
   {
     "id": 48,
-    "title": "Sobo Magnetic Glass Cleaner",
-    "image": "https://i.imgur.com/eDT4ENS.jpg",
+    "title": "Magnetic Glass Cleaner RS-12",
+    "image": "https://i.imgur.com/us8Ccp5.jpg",
     "category": "cleaning tools",
-    "price": 55
+    "price": 0
   },
   {
     "id": 53,
-    "title": "Drift Wood",
-    "image": "https://i.imgur.com/UbkEf7k.jpg",
-    "category": "decoration item",
-    "price": 55
-  },
-  {
-    "id": 55,
     "title": "Activated Charchoal",
     "image": "https://i.imgur.com/KYWuDFy.jpg",
     "category": "filteration media",
-    "price": 55
+    "price": 0
+  },
+  {
+    "id": 55,
+    "title": "Steel Aquarium Heater xl-999(100w)",
+    "image": "https://i.imgur.com/8H8mALP.jpg",
+    "category": "heater",
+    "price": 1000
   }
 ]

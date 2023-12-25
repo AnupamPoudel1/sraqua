@@ -6,8 +6,9 @@ const ProductsCard = (props) => {
             <div className="rounded-md bg-white w-full h-[90%] text-white hover:text-blue-950 hover:bg-white transition-all duration-300 overflow-hidden">
                 <img src={props.img} alt="products" className='h-full w-full object-contain transition-all duration-500' />
             </div>
-            <div className="text-base font-bold text-black mt-4 colr">
-                {props.title}
+            <div className="text-base text-black mt-4 colr flex flex-col justify-center items-center">
+                <p className='font-bold'>{props.title}</p>
+                <p>Price: {props.price}</p>
             </div>
         </div>
     )

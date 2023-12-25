@@ -6,9 +6,6 @@ const PetsCard = (props) => {
             <div className="rounded-md bg-white hover:bg-white w-full h-full text-white hover:text-blue-950 transition-all duration-300 overflow-hidden">
                 <img src={props.img} alt="aquatic pets" className='h-full w-full object-cover transition-all duration-500' />
             </div>
-            {/* <div className="text-base font-bold text-blue-950 mt-4">
-                {props.title}
-            </div> */}
         </div>
     )
 }

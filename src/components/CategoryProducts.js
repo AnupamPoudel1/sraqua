@@ -26,7 +26,12 @@ const CategoryProducts = (props) => {
                             {
                                 filteredData.map((item) => {
                                     return (
-                                        <ProductsCard key={item.id} img={item.image} title={item.title} />
+                                        <ProductsCard
+                                            key={item.id}
+                                            img={item.image}
+                                            title={item.title}
+                                            price={item.price}
+                                        />
                                     )
                                 })
                             }

@@ -15,12 +15,16 @@ const ProductsHeader = () => {
     }
     const handleHide = () => {
         setShow(false);
+        setDropF(false);
+        setDropP(false);
     }
     const handleDropP = () => {
         setDropP(!dropP);
+        setDropF(false);
     }
     const handleDropF = () => {
         setDropF(!dropF);
+        setDropP(false);
     }
 
     return (
@@ -30,6 +34,7 @@ const ProductsHeader = () => {
                     <div className="h-20 w-20">
                         <img src={logo} alt="logo" className='h-full w-full bg-cover rounded-xl' />
                     </div>
+                    <Link to="/shop" className='hover:text-blue-400 mx-5 text-white' onClick={handleHide}>All</Link>
                     <div className="relative cursor-pointer flex flex-col justify-center items-center mx-5" onClick={handleDropF}>
                         <div className="flex justify-center text-white hover:text-blue-400 items-center">Filters
                             {!dropF ? <RiArrowDropDownLine className='font-bold text-5xl' /> : <RiArrowDropUpLine className='font-bold text-5xl' />}

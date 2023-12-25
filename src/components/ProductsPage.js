@@ -7,7 +7,9 @@ import { Link } from 'react-router-dom';
 import ProductsHeader from './ProductsHeader';
 
 const ProductsPage = () => {
-
+    const handleScroll = () => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }
     return (
         <section className='h-min w-full bg-white flex flex-col justify-center items-center overflow-x-hidden relative' id='shop'>
             <ProductsHeader />
@@ -33,7 +35,12 @@ const ProductsPage = () => {
                             {
                                 data.map((item) => {
                                     return (
-                                        <ProductsCard key={item.id} img={item.image} title={item.title} />
+                                        <ProductsCard
+                                            key={item.id}
+                                            img={item.image}
+                                            title={item.title}
+                                            price={item.price}
+                                        />
                                     )
                                 })
                             }
@@ -42,7 +49,7 @@ const ProductsPage = () => {
                 </div>
             </div>
             <Link to='/' className="fixed bottom-[18%] max-sm:bottom-[15%] right-[2%] z-[2000] w-max flex flex-col justify-center items-center text-blue-400 transition-all duration-300 cursor-pointer text-base max-lg:text-sm">
-                <div className="rounded-full bg-white w-12 h-12 p-2 text-blue-950 hover:text-blue-950 hover:bg-blue-400 transition-all duration-300 mr-1">
+                <div className="rounded-full bg-white w-12 h-12 p-2 text-blue-950 hover:text-blue-950 hover:bg-blue-400 transition-all duration-300 mr-1" onClick={handleScroll}>
                     <AiFillHome className='w-full h-full' />
                 </div>
                 Home
