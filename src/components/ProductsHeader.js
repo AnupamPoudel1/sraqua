@@ -30,10 +30,10 @@ const ProductsHeader = () => {
     return (
         <>
             <div className="max-md:hidden flex justify-center items-center h-max w-full bg-blue-950 py-6">
-                <div className="flex justify-between items-center flex-wrap text-lg">
-                    <div className="h-20 w-20">
-                        <img src={logo} alt="logo" className='h-full w-full bg-cover rounded-xl' />
-                    </div>
+                <div className="h-20 w-20">
+                    <img src={logo} alt="logo" className='h-full w-full bg-cover rounded-xl' />
+                </div>
+                <div className="max-w-7xl grid grid-cols-5 gap-5 text-lg">
                     <Link to="/shop" className='hover:text-blue-400 mx-5 text-white' onClick={handleHide}>All</Link>
                     <div className="relative cursor-pointer flex flex-col justify-center items-center mx-5" onClick={handleDropF}>
                         <div className="flex justify-center text-white hover:text-blue-400 items-center">Filters
@@ -61,6 +61,11 @@ const ProductsHeader = () => {
                     <Link to="/shop/heater" className='hover:text-blue-400 mx-5 text-white' onClick={handleHide}>Heater</Link>
                     <Link to="/shop/light" className='hover:text-blue-400 mx-5 text-white' onClick={handleHide}>Light</Link>
                     <Link to="/shop/thermometer" className='hover:text-blue-400 mx-5 text-white' onClick={handleHide}>Thermometer</Link>
+                    <Link to="/shop/decoration item" className='hover:text-blue-400 mx-5 text-white' onClick={handleHide}>Decoration Item</Link>
+                    <Link to="/shop/air pipe" className='hover:text-blue-400 mx-5 text-white' onClick={handleHide}>Air Pipe</Link>
+                    <Link to="/shop/pot" className='hover:text-blue-400 mx-5 text-white' onClick={handleHide}>Pot</Link>
+                    <Link to="/shop/salt" className='hover:text-blue-400 mx-5 text-white' onClick={handleHide}>Salt</Link>
+                    <Link to="/shop/sand" className='hover:text-blue-400 mx-5 text-white' onClick={handleHide}>Sand</Link>
                 </div>
             </div>
 
