@@ -1,5 +1,5 @@
 import React from 'react';
-import PetsCard from './PetsCard';
+import PetsCard from '../components/PetsCard';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import fish1 from '../assets/fish1 (1).png';

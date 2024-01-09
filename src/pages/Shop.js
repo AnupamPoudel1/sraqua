@@ -1,6 +1,6 @@
 import React from 'react';
-import ProductsCard from './ProductsCard';
-import data from './someProducts.json';
+import ProductsCard from '../components/ProductsCard';
+import data from '../api/someProducts.json';
 import { Link } from 'react-router-dom';
 
 const Shop = () => {

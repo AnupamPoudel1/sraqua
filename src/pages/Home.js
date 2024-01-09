@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from './Header';
+import Header from '../components/Header';
 import Typewriter from 'typewriter-effect';
-import About from '../components/About';
-import Services from "../components/Services";
-import AquaticPets from "../components/AquaticPets";
-import Contact from "../components/Contact";
-import Shop from "../components/Shop";
+import About from './About';
+import Services from "./Services";
+import AquaticPets from "./AquaticPets";
+import Contact from "./Contact";
+import Shop from "./Shop";
 import { FaStoreAlt } from 'react-icons/fa';
 import { AiFillMessage } from 'react-icons/ai';
 import { Link } from 'react-router-dom';

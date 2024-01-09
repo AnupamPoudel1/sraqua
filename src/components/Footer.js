@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import { BsFacebook, BsYoutube } from 'react-icons/bs';
 
 const Footer = () => {
     return (
