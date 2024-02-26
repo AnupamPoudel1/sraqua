@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductsCard from '../components/ProductsCard';
+import ProductsCard from '../components/ui/ProductsCard';
 import data from '../api/products.json';
 import { AiFillHome, AiFillMessage } from 'react-icons/ai';
 import { Link } from 'react-router-dom';

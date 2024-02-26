@@ -6,6 +6,9 @@ import Layout from './Layout';
 import Home from './pages/Home';
 import ProductsPage from './pages/ProductsPage';
 import CategoryProducts from './pages/CategoryProducts';
+import LoginPage from './pages/admin/LoginPage';
+import AdminPannel from './pages/admin/AdminPannel';
+import { AuthProvider } from './context/AuthProvider';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +30,14 @@ const router = createBrowserRouter([
       {
         path: 'shop/:pCategory',
         element: <CategoryProducts />
+      },
+      {
+        path: 'admin-login',
+        element: <LoginPage />
+      },
+      {
+        path: 'admin-pannel',
+        element: <AdminPannel />
       }
     ]
   }
@@ -35,6 +46,8 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );
