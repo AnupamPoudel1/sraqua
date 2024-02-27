@@ -32,7 +32,7 @@ const router = createBrowserRouter([
         element: <CategoryProducts />
       },
       {
-        path: 'sraqua/admin-login',
+        path: 'sraqua/admin-login/',
         element: <LoginPage />
       },
       {
