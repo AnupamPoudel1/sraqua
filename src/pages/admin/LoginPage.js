@@ -1,18 +1,20 @@
 import React from 'react';
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import logo from '../../assets/logo.jpg';
-import AuthContext from '../../context/AuthProvider';
 import axios from '../../api/axios';
+import useAtuh from '../../hooks/useAuth';
 
 const LOGIN_URL = '/auth';
 
 const LoginPage = () => {
-    const { setAuth } = useContext(AuthContext);
+    const { setAuth } = useAtuh();
     const [user, setUser] = useState('');
     const [psw, setPsw] = useState('');
     const [errMsg, setErrMsg] = useState('');
+    const [sucMsg, setSucMsg] = useState('');
     const [eror, setEror] = useState(false);
+    const [suc, setSuc] = useState(false);
     const [showPass, setShowPass] = useState(false);
 
     useEffect(() => {
@@ -38,6 +40,8 @@ const LoginPage = () => {
             setAuth({ user, psw, roles, accessToken })
             setUser('');
             setPsw('');
+            setSuc(true);
+            setSucMsg("Login Successful");
         } catch (err) {
             if (!err?.response) {
                 setErrMsg('No Server Response');
@@ -58,6 +62,9 @@ const LoginPage = () => {
             <div className='relative w-[90%] max-lg:w-full max-w-7xl h-full flex justify-center items-center text-white'>
                 <div className={eror ? 'absolute top-5 right-5 p-4 rounded-lg text-white bg-red-700 transition-all duration-300' : 'absolute -top-96 -right-96 p-4 rounded-lg text-white bg-red-700 transition-all duration-300'}>
                     {errMsg}
+                </div>
+                <div className={suc ? 'absolute top-5 right-5 p-4 rounded-lg text-white bg-green-700 transition-all duration-300' : 'absolute -top-96 -right-96 p-4 rounded-lg text-white bg-green-700 transition-all duration-300'}>
+                    {sucMsg}
                 </div>
                 <div className=' w-max h-max flex flex-col items-center justify-center my-5 max-lg:my-5 shadow-xl p-5'>
                     <div className="h-20 w-20">
