@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import logo from '../../assets/logo.jpg';
 import axios from '../../api/axios';
 import useAtuh from '../../hooks/useAuth';
@@ -8,6 +9,10 @@ import useAtuh from '../../hooks/useAuth';
 const LOGIN_URL = '/auth';
 
 const LoginPage = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = '/admin-pannel';
+
     const { setAuth } = useAtuh();
     const [user, setUser] = useState('');
     const [psw, setPsw] = useState('');
@@ -42,6 +47,7 @@ const LoginPage = () => {
             setPsw('');
             setSuc(true);
             setSucMsg("Login Successful");
+            navigate(from, { replace: true })
         } catch (err) {
             if (!err?.response) {
                 setErrMsg('No Server Response');

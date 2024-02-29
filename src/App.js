@@ -5,6 +5,7 @@ import ProductsPage from './pages/ProductsPage';
 import CategoryProducts from './pages/CategoryProducts';
 import LoginPage from './pages/admin/LoginPage';
 import AdminPannel from './pages/admin/AdminPannel';
+import RequireAuth from './components/RequireAuth';
 import { Routes, Route } from 'react-router-dom';
 
 const App = () => {
@@ -13,12 +14,15 @@ const App = () => {
             <Route path='/' element={<Layout />}>
                 {/* Public routes */}
                 <Route path='/' element={<Home />} />
+                <Route path='/sraqua' element={<Home />} />
                 <Route path='login' element={<LoginPage />} />
                 <Route path='shop' element={<ProductsPage />} />
                 <Route path='shop/:pCategory' element={<CategoryProducts />} />
 
                 {/* Protected routes */}
-                <Route path='admin-pannel' element={<AdminPannel />} />
+                <Route element={<RequireAuth />}>
+                    <Route path='admin-pannel' element={<AdminPannel />} />
+                </Route>
             </Route>
         </Routes>
     )
