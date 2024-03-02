@@ -1,21 +1,67 @@
 import React from 'react';
 import { useState } from 'react';
+import axios from '../../api/axios';
+
+const ADDPRODUCTS_URL = '/editProducts';
 
 const AddProducts = () => {
 
-    const [product, setProduct] = useState('');
+    const [success, setSuccess] = useState(false);
+    const [error, setError] = useState(false);
+    const [successMsg, setSuccessMsg] = useState('');
+    const [errorMsg, setErrorMsg] = useState('');
+
+    const [productName, setProductName] = useState('');
+    const [image, setImage] = useState('');
     const [category, setCategory] = useState('');
     const [price, setPrice] = useState('');
     const [stock, setStock] = useState('');
-    const [image, setImage] = useState('');
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await axios.post(ADDPRODUCTS_URL,
+                JSON.stringify({ productName, image, category, price, stock }),
+                {
+                    headers: { 'Content-Type': 'application/json' }
+                }
+            );
+            console.log(JSON.stringify(response?.data));
+            setProductName('');
+            setImage('');
+            setCategory('');
+            setPrice('');
+            setStock('');
+            setSuccess(true);
+            setSuccessMsg('Product Added Successfully');
+        } catch (err) {
+            if (!err?.response) {
+                setErrorMsg('No Server Response');
+            } else if (err.response?.status === 400) {
+                setErrorMsg('Missing Product Name, image, category, price or stock');
+            } else if (err.response?.status === 401) {
+                setErrorMsg('Unauthorized');
+            } else {
+                setErrorMsg("Failed to add product");
+            }
+            setError(true);
+        }
+    }
 
     return (
         <div className=' w-max h-max flex flex-col items-center justify-center my-5 max-lg:my-5 shadow-xl p-5'>
+            <div className={error ? 'absolute top-5 right-5 p-4 rounded-lg text-white bg-red-700 transition-all duration-300' : 'absolute -top-96 -right-96 p-4 rounded-lg text-white bg-red-700 transition-all duration-300'}>
+                {errorMsg}
+            </div>
+            <div className={success ? 'absolute top-5 right-5 p-4 rounded-lg text-white bg-green-700 transition-all duration-300' : 'absolute -top-96 -right-96 p-4 rounded-lg text-white bg-green-700 transition-all duration-300'}>
+                {successMsg}
+            </div>
             <div className="text-3xl max-lg:text-3xl text-blue-950 font-bold mb-5 ">
                 Add Prodcut
             </div>
+
             <div className="form">
-                <form action="POST" className="flex flex-col justify-center items-center">
+                <form action="POST" className="flex flex-col justify-center items-center" onSubmit={handleSubmit}>
                     <div className="flex flex-col justify-center items-start m-3">
                         <label htmlFor="name" className="text-base text-black my-2">
                             Product name
@@ -24,8 +70,8 @@ const AddProducts = () => {
                             type="text"
                             placeholder='eg: Six Seven'
                             className="w-60 bg-white shadow-xl focus:outline-none active:outline-none focus:border-white transition-colors duration-500 p-2 text-black"
-                            value={product}
-                            onChange={e => setProduct(e.target.value)}
+                            value={productName}
+                            onChange={e => setProductName(e.target.value)}
                             required
                         />
                     </div>
@@ -81,7 +127,7 @@ const AddProducts = () => {
                             required
                         />
                     </div>
-                    <input type='submit' className={"w-60 mt-7 bg-blue-950 text-white transition-all duration-500 p-3 cursor-pointer"} value={"Login"} />
+                    <input type='submit' className={"w-60 mt-7 bg-blue-950 text-white transition-all duration-500 p-3 cursor-pointer"} value={"Add Product"} onClick={handleSubmit}/>
                 </form>
             </div>
         </div>

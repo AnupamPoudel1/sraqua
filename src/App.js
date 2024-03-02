@@ -18,6 +18,7 @@ const App = () => {
                 <Route path='login' element={<LoginPage />} />
                 <Route path='shop' element={<ProductsPage />} />
                 <Route path='shop/:pCategory' element={<CategoryProducts />} />
+                {/* <Route path='admin-pannel' element={<AdminPannel />} /> */}
 
                 {/* Protected routes */}
                 <Route element={<RequireAuth />}>

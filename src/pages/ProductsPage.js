@@ -1,11 +1,30 @@
-import React from 'react';
+import { React } from 'react';
 import ProductsCard from '../components/ui/ProductsCard';
 import data from '../api/products.json';
 import { AiFillHome, AiFillMessage } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import ProductsHeader from '../components/ProductsHeader';
+// import axios from '../api/axios';
+
+// const PRODUCTS_URL = '/products';
 
 const ProductsPage = () => {
+
+    // const [success, setSuccess] = useState(true);
+    // const [errMsg, setErrMsg] = useState('');
+
+    // try {
+    //     const response = await axios.get(PRODUCTS_URL,
+    //         JSON.stringify(),
+    //         {
+    //             headers: { 'Content-Type': 'application/json' }
+    //         }
+    //         );
+    //         // console.log(response?.data);
+    // } catch (err) {
+    //     console.log("Error");
+    // }
+
     const handleScroll = () => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     }
