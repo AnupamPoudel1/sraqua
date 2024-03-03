@@ -1,29 +1,33 @@
-import { React } from 'react';
+import { React, useState, useEffect } from 'react';
 import ProductsCard from '../components/ui/ProductsCard';
-import data from '../api/products.json';
 import { AiFillHome, AiFillMessage } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import ProductsHeader from '../components/ProductsHeader';
-// import axios from '../api/axios';
+import axios from '../api/axios';
 
-// const PRODUCTS_URL = '/products';
+const PRODUCTS_URL = '/products';
 
 const ProductsPage = () => {
 
-    // const [success, setSuccess] = useState(true);
-    // const [errMsg, setErrMsg] = useState('');
+    const [products, setProducts] = useState();
 
-    // try {
-    //     const response = await axios.get(PRODUCTS_URL,
-    //         JSON.stringify(),
-    //         {
-    //             headers: { 'Content-Type': 'application/json' }
-    //         }
-    //         );
-    //         // console.log(response?.data);
-    // } catch (err) {
-    //     console.log("Error");
-    // }
+    useEffect(() => {
+        let isMounted = true;
+        const controller = new AbortController();
+
+        const getProducts = async () => {
+            try {
+                const response = await axios.get(PRODUCTS_URL, {
+                    signal: controller.signal
+                });
+                console.log(response.data);
+                isMounted && setProducts(response.data);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        getProducts();
+    }, [])
 
     const handleScroll = () => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
@@ -39,16 +43,15 @@ const ProductsPage = () => {
                         </h1>
                         <div className="grid w-full px-5 sm:px-14 lg:px-24 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 lg:gap-8 xl:gap-10 z-[1] mt-5">
                             {
-                                data.map((item) => {
-                                    return (
-                                        <ProductsCard
-                                            key={item.id}
-                                            img={item.image}
-                                            title={item.title}
-                                            price={item.price}
-                                        />
-                                    )
-                                })
+                                products?.length
+                                    ? (
+                                        products.map((product, i) => <ProductsCard
+                                            key={i}
+                                            img={product?.image}
+                                            title={product?.productName}
+                                            price={product?.price}
+                                        />)
+                                    ) : <p className='text-black'>No products to display</p>
                             }
                         </div>
                     </div>

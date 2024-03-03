@@ -1,10 +1,12 @@
 import React from 'react';
 import { useState } from 'react';
-import axios from '../../api/axios';
+import useAxiosPrivate from '../../hooks/useAxiosPrivate';
 
 const ADDPRODUCTS_URL = '/editProducts';
 
 const AddProducts = () => {
+
+    const axiosPrivate = useAxiosPrivate();
 
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState(false);
@@ -20,7 +22,7 @@ const AddProducts = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post(ADDPRODUCTS_URL,
+            const response = await axiosPrivate.post(ADDPRODUCTS_URL,
                 JSON.stringify({ productName, image, category, price, stock }),
                 {
                     headers: { 'Content-Type': 'application/json' }
