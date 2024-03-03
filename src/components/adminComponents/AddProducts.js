@@ -36,6 +36,9 @@ const AddProducts = () => {
             setStock('');
             setSuccess(true);
             setSuccessMsg('Product Added Successfully');
+            setInterval(() => {
+                setSuccess(false);
+            }, 2000);
         } catch (err) {
             if (!err?.response) {
                 setErrorMsg('No Server Response');
@@ -47,6 +50,9 @@ const AddProducts = () => {
                 setErrorMsg("Failed to add product");
             }
             setError(true);
+            setInterval(() => {
+                setError(false);
+            }, 2000);
         }
     }
 
@@ -129,7 +135,7 @@ const AddProducts = () => {
                             required
                         />
                     </div>
-                    <input type='submit' className={"w-60 mt-7 bg-blue-950 text-white transition-all duration-500 p-3 cursor-pointer"} value={"Add Product"} onClick={handleSubmit}/>
+                    <input type='submit' className={"w-60 mt-7 bg-blue-950 text-white transition-all duration-500 p-3 cursor-pointer"} value={"Add Product"} onClick={handleSubmit} />
                 </form>
             </div>
         </div>

@@ -51,8 +51,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <About />
       <Services />
+      <About />
       <AquaticPets />
       <Shop />
       <Contact />

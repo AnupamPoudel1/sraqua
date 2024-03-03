@@ -6,6 +6,7 @@ import CategoryProducts from './pages/CategoryProducts';
 import LoginPage from './pages/admin/LoginPage';
 import AdminPannel from './pages/admin/AdminPannel';
 import RequireAuth from './components/RequireAuth';
+import PresistLogin from './components/PresistLogin';
 import { Routes, Route } from 'react-router-dom';
 
 const App = () => {
@@ -21,8 +22,10 @@ const App = () => {
                 {/* <Route path='admin-pannel' element={<AdminPannel />} /> */}
 
                 {/* Protected routes */}
-                <Route element={<RequireAuth />}>
-                    <Route path='admin-pannel' element={<AdminPannel />} />
+                <Route element={<PresistLogin />}>
+                    <Route element={<RequireAuth />}>
+                        <Route path='admin-pannel' element={<AdminPannel />} />
+                    </Route>
                 </Route>
             </Route>
         </Routes>

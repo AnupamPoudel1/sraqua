@@ -1,16 +1,38 @@
-import React from 'react';
+import {React, useEffect, useState} from 'react';
 import ProductsCard from '../components/ui/ProductsCard';
-import data from '../api/products.json';
 import { AiFillHome, AiFillMessage } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import ProductsHeader from '../components/ProductsHeader';
+import axios from '../api/axios';
+
+const PRODUCTS_URL = '/products';
 
 const CategoryProducts = (props) => {
 
     const { pCategory } = useParams();
 
-    const filteredData = data.filter((item) => item.category === pCategory);
+    const [products, setProducts] = useState();
+
+    useEffect(() => {
+        let isMounted = true;
+        const controller = new AbortController();
+
+        const getProducts = async () => {
+            try {
+                const response = await axios.get(PRODUCTS_URL, {
+                    signal: controller.signal
+                });
+                console.log(response.data);
+                isMounted && setProducts(response.data);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        getProducts();
+    }, []);
+
+    const filteredData = products?.length ? products.filter((product) => product.category === pCategory) : null;
 
     return (
         <section className='min-h-screen w-full bg-white flex flex-col items-center overflow-x-hidden relative' id='shop'>
@@ -23,16 +45,15 @@ const CategoryProducts = (props) => {
                         </h1>
                         <div className="grid w-full px-5 sm:px-14 lg:px-24 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 lg:gap-8 xl:gap-10 z-[1] mt-5">
                             {
-                                filteredData.map((item) => {
-                                    return (
-                                        <ProductsCard
-                                            key={item.id}
-                                            img={item.image}
-                                            title={item.title}
-                                            price={item.price}
-                                        />
-                                    )
-                                })
+                                filteredData?.length
+                                    ? (
+                                        filteredData.map((product, i) => <ProductsCard
+                                            key={i}
+                                            img={product?.image}
+                                            title={product?.productName}
+                                            price={product?.price}
+                                        />)
+                                    ) : <p className='text-black'>No products to display</p>
                             }
                         </div>
                     </div>

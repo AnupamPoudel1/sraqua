@@ -13,6 +13,7 @@ const LoginPage = () => {
     const from = '/admin-pannel';
 
     const { setAuth } = useAtuh();
+
     const [user, setUser] = useState('');
     const [psw, setPsw] = useState('');
     const [errMsg, setErrMsg] = useState('');
@@ -33,7 +34,8 @@ const LoginPage = () => {
             const response = await axios.post(LOGIN_URL,
                 JSON.stringify({ user, psw }),
                 {
-                    headers: { 'Content-Type': 'application/json' }
+                    headers: { 'Content-Type': 'application/json' },
+                    withCredentials: true
                 }
             );
             console.log(JSON.stringify(response?.data));
