@@ -18,7 +18,6 @@ const PresistLogin = () => {
                 setIsLoading(false);
             }
         }
-
         !auth?.accessToken ? verifyRefreshToken() : setIsLoading(false);
     }, [])
 
