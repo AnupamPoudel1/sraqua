@@ -8,6 +8,9 @@ import AdminPannel from './pages/admin/AdminPannel';
 import RequireAuth from './components/RequireAuth';
 import PresistLogin from './components/PresistLogin';
 import { Routes, Route } from 'react-router-dom';
+import Dashboard from './components/adminComponents/Dashboard';
+import AddProducts from './components/adminComponents/AddProducts';
+import EditProduct from './components/adminComponents/EditProduct';
 
 const App = () => {
     return (
@@ -24,7 +27,11 @@ const App = () => {
                 {/* Protected routes */}
                 <Route element={<PresistLogin />}>
                     <Route element={<RequireAuth />}>
-                        <Route path='admin-pannel' element={<AdminPannel />} />
+                        <Route path='admin-pannel' element={<AdminPannel />} >
+                            <Route path='dashboard' element={<Dashboard />} />
+                            <Route path='addProduct' element={<AddProducts />} />
+                            <Route path='dashboard/editProduct/:pId' element={<EditProduct />} />
+                        </Route>
                     </Route>
                 </Route>
             </Route>

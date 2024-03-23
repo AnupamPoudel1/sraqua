@@ -10,7 +10,7 @@ const LOGIN_URL = '/auth';
 
 const LoginPage = () => {
     const navigate = useNavigate();
-    const from = '/admin-pannel';
+    const from = '/admin-pannel/dashboard';
 
     const { setAuth } = useAtuh();
 
